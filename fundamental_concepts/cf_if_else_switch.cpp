@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
     // Declare and initialize variables
-    int a = 4;
+    int a = 5;
     int b = 10;
 
     // if statement
