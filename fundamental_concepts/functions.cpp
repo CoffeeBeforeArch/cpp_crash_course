@@ -1,5 +1,6 @@
 // This program shows off built in and user defined functions to print
 // the size of different data types and return different values.
+// By: Nick from CoffeeBeforeArch
 
 #include <iostream>
 
