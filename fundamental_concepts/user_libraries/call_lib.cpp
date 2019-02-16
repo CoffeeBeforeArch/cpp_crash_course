@@ -22,5 +22,5 @@ int main(){
     cout << a << " squared = " << result_square << endl;
     cout << b << " cubed = " << result_cube << endl;
 
-    return 0
+    return 0;
 }
