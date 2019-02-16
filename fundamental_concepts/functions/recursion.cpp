@@ -6,7 +6,7 @@
 using namespace std;
 
 // Calculate factorial (assume positive number)
-// e.g. 5! = 5 * 4 * 3 * 2 * 1
+// e.g. 5! = 5 * 4 * 3 * 2 * 1 = 120
 int factorial(int n){
     if(n <= 1){
         return 1;
@@ -40,7 +40,7 @@ int main(){
 
     // Print results
     cout << n_factorial << "! = " << result_factorial << endl;
-    cout << n_fibonacci << "! = " << result_fibonacci << endl;
+    cout << "The nth digit of fibonacci is "<< result_fibonacci << endl;
 
     return 0;
 }
