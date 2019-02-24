@@ -1,4 +1,5 @@
-// This program shows off basic classes in C++
+// This program shows off class constructors and class access
+// modifiers in C++
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>

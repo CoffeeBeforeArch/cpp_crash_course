@@ -1,5 +1,4 @@
-// This header file includes the classes relating to two
-// different vector classes
+// This header file includes the classes for a vector and point
 // By: Nick from CoffeeBeforeArch
 
 // A point class that contains a single coordinate pair

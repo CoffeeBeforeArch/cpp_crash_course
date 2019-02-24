@@ -1,4 +1,4 @@
-// This program implements a vector using using a class
+// This program implements a vector and point using using a class
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
