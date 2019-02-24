@@ -1,46 +1,16 @@
-// This program implements a vector using using a class
+// This program shows off basic classes in C++
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
 
+#include "interface.h"
+
 using namespace std;
-
-// A vector class that has all coordinates
-class vector1{
-public:
-    double start_x;
-    double start_y;
-    double end_x;
-    double end_y;
-
-    // Prototype for print function
-    void print();
-};
-
-// A point class that contains a single coordinate pair
-class point{
-public:
-    double x;
-    double y;
-};
-
-// A vector class that has coordinates as point objects
-class vector2{
-public:
-    point start;
-    point end;
-};
 
 // Normal function that prints the starting and ending points of a vector
 void print_vector1(vector1 v){
     cout << "Start x: " << v.start_x << ", Start y: " << v.start_y << endl;
     cout << "End x: " << v.end_x << ", End y: " << v.end_y << endl;
-}
-
-// Method associated with the vector1 to print out the vector
-void vector1::print(){
-    cout << "Start x: " << start_x << ", Start y: " << start_y << endl;
-    cout << "End x: " << end_x << ", End y: " << end_y << endl;
 }
 
 int main(){
