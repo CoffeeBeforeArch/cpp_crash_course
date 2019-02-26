@@ -22,10 +22,10 @@ vector::vector(){
 }
 
 vector::vector(vector &v){
-    start_x = v.start_x;
-    start_y = v.start_y;
-    end_x = 1.0;
-    end_y = 1.0;
+    start_x = v.end_x;
+    start_y = v.end_y;
+    end_x = v.start_x;
+    end_y = v.start_y;
 }
 
 // Method associated with the vector1 to print out the vector
