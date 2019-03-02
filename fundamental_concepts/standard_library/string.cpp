@@ -35,11 +35,13 @@ int main(){
 
     // Re-size the string to 5 characters and print size and capacity
     str1.resize(5);
+    cout << str1 << endl;
     cout << "Size: " << str1.size() << endl;
     cout << "Capacity: " << str1.capacity() << endl;
 
     // Call shrink to fit to match the number of characters
     str1.shrink_to_fit();
+    cout << str1 << endl;
     cout << "Size: " << str1.size() << endl;
     cout << "Capacity: " << str1.capacity() << endl;
 
