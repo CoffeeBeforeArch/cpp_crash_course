@@ -28,7 +28,7 @@ public:
     // Another initialization list
     Car(const string &myLicense, const int myYear, const string myStyle)
         : Vehicle(myLicense, myYear), style(myStyle) {}
-    const string &getStyle() {return style;}
+    const string &getStyle() const {return style;}
 };
 
 // Truck class that also inherits from Vehicle
