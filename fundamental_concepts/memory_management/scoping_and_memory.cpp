@@ -40,8 +40,9 @@ int main(){
     int *p2 = getPtrGood();
 
     // Print both pointers
-    // Printing the local one is undefined behavior
-    cout << "Address: " << p1 << " Value: " << *p1 << endl;
+    // Printing the local one is undefined behavior (uncomment could
+    // lead to a segmentation fault!)
+    // cout << "Address: " << p1 << " Value: " << *p1 << endl;
     cout << "Address: " << p2 << " Value: " << *p2 << endl;
 
     // If we're done with heap allocated memory, get rid of it
@@ -59,9 +60,10 @@ int main(){
     }
     delete p2;
 
-    // Print all the pointers that are still valid, + the deleted one
-    // Printing the deleted one is undefined behavior
-    for(int i = 0; i < old_pointers.size(); i++){
+    // Print all the pointers that are still valid
+    // Printing the deleted one is undefined behavior (could lead to a
+    // segmentation fault, so do size() - 1)
+    for(int i = 0; i < old_pointers.size() - 1; i++){
         cout << "Address: " << old_pointers[i] << " Value: " << *old_pointers[i] << endl;
     }
 

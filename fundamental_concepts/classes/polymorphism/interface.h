@@ -20,7 +20,7 @@ public:
     virtual const string getDescription() const {return license + " from " + to_string(year);}
     // Comment out above, and uncomment out below to make Vehicle an abstract class
     // and getDescription() pure virtual
-    //virtual const string getDescription() const = 0; 
+    // virtual const string getDescription() const = 0;
 };
 
 // Car class inherits from Vehicle class
