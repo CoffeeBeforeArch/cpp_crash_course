@@ -1,4 +1,4 @@
-// This file contains the interface for our inheritance example
+// This file contains the interface for our polymorphism example
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
@@ -17,6 +17,10 @@ public:
         : license(myLicense), year(myYear) {}
     const string &getLicense() const {return license;}
     const int getYear() const {return year;}
+    virtual const string getDescription() const {return license + " from " + to_string(year);}
+    // Comment out above, and uncomment out below to make Vehicle an abstract class
+    // and getDescription() pure virtual
+    //virtual const string getDescription() const = 0; 
 };
 
 // Car class inherits from Vehicle class
@@ -29,6 +33,7 @@ public:
     Car(const string &myLicense, const int myYear, const string myStyle)
         : Vehicle(myLicense, myYear), style(myStyle) {}
     const string &getStyle() const {return style;}
+    const string getDescription() const {return license + " from " + to_string(year) + " with style " + style;}
 };
 
 // Truck class that also inherits from Vehicle
@@ -40,5 +45,6 @@ public:
     Truck(const string &myLicense, const int myYear, const int myBedLength)
         : Vehicle(myLicense, myYear), bed_length(myBedLength) {}
     const int &getBedLength() {return bed_length;}
+    const string getDescription() const {return license + " from " + to_string(year) + " with bed length " + to_string(bed_length);}
 };
 
