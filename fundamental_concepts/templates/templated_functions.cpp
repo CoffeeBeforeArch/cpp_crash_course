@@ -24,6 +24,11 @@ T sum(const T a, const T b){
     return a + b;
 }
 
+template <typename T, typename U>
+U sum(const T a, const U b){
+    return a + b;
+}
+
 int main(){
     // Variables for functions
     int a_i = 10;
@@ -42,6 +47,10 @@ int main(){
     // Print out sums using a templated functions with implicit type
     cout << "Templated int sum: " << sum(a_i, b_i) << endl;
     cout << "Templated double sum: " << sum(a_d, b_d) << endl;
+
+    // Print out sums using a templated functions with multiple types
+    cout << "Templated int/double sum: " << sum(a_i, b_d) << endl;
+    cout << "Templated double/int sum: " << sum(a_d, b_i) << endl;
 
     return 0;
 }
