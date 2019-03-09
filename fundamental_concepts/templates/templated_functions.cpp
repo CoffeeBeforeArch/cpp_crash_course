@@ -35,7 +35,11 @@ int main(){
     cout << "Overload int sum: " << sum_overload(a_i, b_i) << endl;
     cout << "Overload double sum: " << sum_overload(a_d, b_d) << endl;
 
-    // Print out sums using a templated functions
+    // Print out sums using a templated functions with explicit type
+    cout << "Templated int sum: " << sum<int>(a_i, b_i) << endl;
+    cout << "Templated double sum: " << sum<double>(a_d, b_d) << endl;
+
+    // Print out sums using a templated functions with implicit type
     cout << "Templated int sum: " << sum(a_i, b_i) << endl;
     cout << "Templated double sum: " << sum(a_d, b_d) << endl;
 
