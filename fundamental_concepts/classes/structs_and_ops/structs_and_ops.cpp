@@ -18,7 +18,7 @@ USCurrency operator+(const USCurrency m, const USCurrency o){
     tmp.cents = m.cents + o.cents;
     tmp.dollars = m.dollars + o.dollars;
 
-    if(tmp.cents > 100){
+    if(tmp.cents >= 100){
         tmp.dollars += 1;
         tmp.cents -= 100;
     }
