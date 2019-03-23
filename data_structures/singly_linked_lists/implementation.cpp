@@ -12,11 +12,10 @@ void LinkedList::insert_head(int d){
     // Create a new node with data value 'd'
     Node *new_head = new Node(d);
 
-    // Set head = tail = temp if list is empty
+    // Set head = temp if list is empty
     // Otherwise perform normal insertion
     if(head == NULL){
         head = new_head;
-        tail = new_head;
     } else {
         new_head->next = head;
         head = new_head;
@@ -26,37 +25,43 @@ void LinkedList::insert_head(int d){
 }
 
 // Add node at position 'p' in list
-// Assumes 'p' is a valid location
+// Position 'p' must exist in the list
 void LinkedList::insert_position(int d, int p){
-    cout << "Position " << p <<  " insert with data: " << d << endl;
-
     // Create a new node with data value 'd'
     Node *new_node = new Node(d);
 
-    // Create temp node for walking the list
-    Node *temp_node = head;
-    // Keep track of previous node to update its 'next'
-    Node *prev = NULL;
-    // Walk the list to get to the entry point for new node
-    for(int i = 0; i < p; i++){
-        // Check if insertion point is past the end of the list
-        assert(temp_node != NULL);
-        // Update previous node and current node
-        prev = temp_node;
-        temp_node = temp_node->next;
+    // Set head = new_node if list is empty and p == 0
+    // Otherwise perform normal insertion
+    if(head == NULL && p == 0){
+        head = new_node;
+    }else{
+        Node *temp = head;
+        Node *prev = NULL;
+        // Walk the list to get to the entry point for new node
+        for(int i = 0; i < p; i++){
+            // Check if insertion point is past potential new tail
+            assert(temp != NULL);
+            // Update previous node and current node
+            prev = temp;
+            temp = temp->next;
+        }
+        // Check if this is actually head insertion
+        // Otherwise perform normal insertion
+        if(prev == NULL){
+            head = new_node;
+            head->next = temp;
+        }else{
+            new_node->next = prev->next;
+            prev->next = new_node;
+        }
     }
-    
-    // Perform insertion
-    prev->next = new_node;
-    new_node->next = temp_node;
 
+    cout << "Position " << p <<  " insert with data: " << d << endl;
     print_list();
 }
 
 // Add node at tail
 void LinkedList::insert_tail(int d){
-    cout << "Tail insert with data: " << d << endl;
-
     // Create new node with value 'd'
     Node *new_tail = new Node(d);
     
@@ -64,7 +69,6 @@ void LinkedList::insert_tail(int d){
     // Otherwise perform normal insertion
     if(head == NULL){
         head = new_tail;
-        tail = new_tail;
     } else{
         // Create temp for walking the list
         Node *temp = head;
@@ -75,71 +79,78 @@ void LinkedList::insert_tail(int d){
         }
         // Assign previous tail's 'next' to be our new node
         temp->next = new_tail;
-        // Assign tail to be our new node
-        tail = new_tail;
     }
     
+    cout << "Tail insert with data: " << d << endl;
     print_list();
 }
 
 // Delete node at head of list
 void LinkedList::delete_head(){
-    cout << "Head delete" << endl;
-
     // Check if list is empty
     assert(head != NULL);
     // Set head->next as new head and free old one
-    Node *temp_node = head;
-    head = temp_node->next;
-    delete temp_node;
 
+    Node *temp = head;
+    head = temp->next;
+    delete temp;
+
+    cout << "Head delete" << endl;
     print_list();
 }
 
 // Delete node at position 'p' in list
 // Assume 'p' is a valid location
 void LinkedList::delete_position(int p){
-    cout << "Position " << p << " delete" << endl;
-
     // Check if list is empty
-    assert(head == NULL);
+    assert(head != NULL);
 
     // Walk the list to the position for deletion
-    Node *temp_node = head;
+    Node *temp = head;
     Node *prev = NULL;
     for(int i = 0; i < p; i++){
         // Check if deletion point is past the end of the list
-        assert(temp_node != NULL);
-        prev = temp_node;
-        temp_node = temp_node->next;
+        assert(temp != NULL);
+        prev = temp;
+        temp = temp->next;
     }
 
-    // Delete update previous next to be current next
-    prev->next = temp_node->next;
-    delete temp_node;
+    // Handle head deletion
+    // Otherwise normal deletion
+    if(prev == NULL){
+        head = temp->next;
+    }else{
+        prev->next = temp->next;
+    }
+    delete temp;
+
+    cout << "Position " << p << " delete" << endl;
     print_list();
 }
 
 // Delete node at tail of list
 void LinkedList::delete_tail(){
-    cout << "Tail delete" << endl;
-
     // Check if list is empty
     assert(head != NULL);
 
     // Walk the list and save the previous and current Node
-    Node *temp_node = head;
+    Node *temp = head;
     Node *prev = NULL;
-    while(temp_node->next != NULL){
-        prev = temp_node;
-        temp_node = temp_node->next;
+    while(temp->next != NULL){
+        prev = temp;
+        temp = temp->next;
     }
 
-    // Update tail and free the old one
-    prev->next = temp_node->next;
-    tail = prev;
-    delete temp_node;
+    // Handle case where there is only 1 list item
+    // Otherwise normal tail delete
+    if(prev == NULL){
+        head = NULL;
+    }else{
+        prev->next = temp->next;
+    }
+    delete temp;
 
+    cout << "Tail delete" << endl;
     print_list();
 }
 

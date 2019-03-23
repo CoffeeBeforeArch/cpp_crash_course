@@ -22,14 +22,10 @@ class LinkedList {
 private:
     // Pointer to list head
     Node *head;
-    // Pointer to list tail
-    Node *tail;
-    // Count of entries
 public:
     // Constructor initialzing NULL pointers
     LinkedList(){
         head = NULL;
-        tail = NULL;
     }
 
     // Add node with data 'd' at head position
