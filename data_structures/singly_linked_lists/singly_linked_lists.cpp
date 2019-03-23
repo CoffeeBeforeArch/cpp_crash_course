@@ -9,14 +9,14 @@ int main(){
     // Create a new linked list
     LinkedList ll;
 
-    // Insert a node at the head
-    ll.insert_head(5);
-
-    // Insert a node at the tail
-    ll.insert_tail(3);
-
-    // Insert a node at position 1
-    ll.insert_position(7, 1);
+    // Insert 5 nodes into the list (alternate head and tail)
+    for(int i = 0; i < 5; i++){
+        if(i % 2){
+            ll.insert_head(i);
+        } else{
+            ll.insert_tail(i);
+        }
+    }
 
     return 0;
 }

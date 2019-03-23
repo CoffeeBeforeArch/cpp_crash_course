@@ -84,18 +84,63 @@ void LinkedList::insert_tail(int d){
 
 // Delete node at head of list
 void LinkedList::delete_head(){
+    cout << "Head delete" << endl;
 
+    // Check if list is empty
+    assert(head != NULL);
+    // Set head->next as new head and free old one
+    Node *temp_node = head;
+    head = temp_node->next;
+    delete temp_node;
+
+    print_list();
 }
 
 // Delete node at position 'p' in list
 // Assume 'p' is a valid location
 void LinkedList::delete_position(int p){
+    cout << "Position " << p << " delete" << endl;
 
+    // Check if list is empty
+    assert(head == NULL);
+
+    // Walk the list to the position for deletion
+    Node *temp_node = head;
+    Node *prev = NULL;
+    for(int i = 0; i < p; i++){
+        // Check if deletion point is past the end of the list
+        assert(temp_node != NULL);
+        prev = temp_node;
+        temp_node = temp_node->next;
+    }
+
+    // Delete update previous next to be current next
+    prev->next = temp_node->next;
+    delete temp_node;
+    print_list();
 }
 
 // Delete node at tail of list
 void LinkedList::delete_tail(){
+    cout << "Tail delete" << endl;
 
+    // Check if list is empty
+    assert(head != NULL);
+
+    // Walk the list and save the previous and current Node
+    Node *temp_node = head;
+    Node *prev = NULL;
+    while(temp_node->next != NULL){
+        prev = temp_node;
+        temp_node = temp_node->next;
+    }
+
+    // Update tail and free the old one
+    prev->next = temp_node->next;
+    tail = prev;
+    delete temp_node;
+
+    print_list();
 }
 
 // Prints out the list
