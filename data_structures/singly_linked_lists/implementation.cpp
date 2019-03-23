@@ -7,8 +7,6 @@ using namespace std;
 
 // Add node at head
 void LinkedList::insert_head(int d){
-    cout << "Head insert with data: " << d << endl;
-
     // Create a new node with data value 'd'
     Node *new_head = new Node(d);
 
@@ -21,6 +19,7 @@ void LinkedList::insert_head(int d){
         head = new_head;
     }
 
+    cout << "Head insert with data: " << d << endl;
     print_list();
 }
 
@@ -89,8 +88,8 @@ void LinkedList::insert_tail(int d){
 void LinkedList::delete_head(){
     // Check if list is empty
     assert(head != NULL);
-    // Set head->next as new head and free old one
 
+    // Set head->next as new head and free old one
     Node *temp = head;
     head = temp->next;
     delete temp;
