@@ -13,11 +13,6 @@ Text Editor: VIM
 
 C++ Compiler: g++
 
-## Concepts covered in C++ Data Structures
-| Video | Concepts | Files |
-| ----- | -------- | ----- |
-| <a href=https://youtu.be/GQ5_xyUBHik>C++ Data Structures: Singly Linked Lists</a> | Singly Linked Lists | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/tree/master/data_structures/singly_linked_lists/interface.h>interface.h</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/tree/master/data_structures/singly_linked_lists/implementation.cpp>implementation.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/tree/master/data_structures/singly_linked_lists/singly_linked_lists.cpp>singly_linked_lists.cpp</a> |
-
 
 ## Concepts covered in C++ Crash Course
 | Video | Concepts | Files |
