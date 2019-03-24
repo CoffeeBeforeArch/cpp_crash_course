@@ -13,7 +13,8 @@ Text Editor: VIM
 
 C++ Compiler: g++
 
-## Concepts covered in each video
+
+## Concepts covered in C++ Crash Course
 | Video | Concepts | Files |
 | ----- | -------- | ----- |
 | <a href=https://youtu.be/vxdb7s8DE6o>C++ Crash Course: Hello, World!</a> | Comments, Main Functions, Include Statements, Namespaces, Compilation | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/getting_started/hello_world.cpp>hello_world.cpp</a> |
