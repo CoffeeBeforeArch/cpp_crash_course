@@ -10,14 +10,9 @@ void LinkedList::insert_head(int d){
     // Create a new node with data value 'd'
     Node *new_head = new Node(d);
 
-    // Set head = temp if list is empty
-    // Otherwise perform normal insertion
-    if(head == NULL){
-        head = new_head;
-    } else {
-        new_head->next = head;
-        head = new_head;
-    }
+    // Insert at the front of the list
+    new_head->next = head;
+    head = new_head;
 
     cout << "Head insert with data: " << d << endl;
     print_list();
@@ -31,12 +26,18 @@ void LinkedList::insert_position(int d, int p){
 
     // Set head = new_node if list is empty and p == 0
     // Otherwise perform normal insertion
-    if(head == NULL && p == 0){
-        head = new_node;
+    if(head == NULL){
+        // Check if head insertion
+        // Otherwise it is an invalid operation
+        if(p == 0){
+            head = new_node;
+        }else{
+            assert(head == NULL && p == 0);
+        }
     }else{
+        // Walk the list to get to the entry point for new node
         Node *temp = head;
         Node *prev = NULL;
-        // Walk the list to get to the entry point for new node
         for(int i = 0; i < p; i++){
             // Check if insertion point is past potential new tail
             assert(temp != NULL);
