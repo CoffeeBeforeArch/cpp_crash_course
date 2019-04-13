@@ -15,9 +15,9 @@ C++ Compiler: g++
 
 
 ## Concepts covered in C++ Crash Course
-| Video | Concepts | Files |
-| ----- | -------- | ----- |
-| <a href=https://youtu.be/vxdb7s8DE6o>C++ Crash Course: Hello, World!</a> | Comments, Main Functions, Include Statements, Namespaces, Compilation | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/getting_started/hello_world.cpp>hello_world.cpp</a> |
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
+| <a href=https://youtu.be/vxdb7s8DE6o>C++ Crash Course: Hello, World!</a> | Comments, Main Functions, Include Statements, Namespaces, Compilation | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/getting_started/hello_world.cpp>hello_world.cpp</a> | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/pdf_tutorials/cpp_crash_course_1.pdf> Tutorial </a> |
 | <a href=https://youtu.be/7Iq9EmkrOXo>C++ Crash Course: Compilation</a> | Preprocessing, Object Code, Linking, Executables | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/getting_started/hello_world.cpp>hello_world.cpp</a> |
 | <a href=https://youtu.be/WD68rFWJDlU>C++ Crash Course: Variables</a> | Declaration, Initialization, Data Types, Operators | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/getting_started/variables.cpp>variables.cpp</a> |
 | <a href=https://youtu.be/zrPILwziC9w>C++ Crash Course: if, else, and switch Statements</a> | if/else Statements, switch Statements | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/cf_if_else_switch.cpp>cf_if_else_switch.cpp</a> |
