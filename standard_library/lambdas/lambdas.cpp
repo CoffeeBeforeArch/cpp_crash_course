@@ -23,7 +23,7 @@ struct building{
 int main(){
     /* 
      * Why Lambdas?
-     * Concise way of defining function object passede to STL
+     * Concise way of defining function object passed to STL
      * algorithms
      * Can create a function with naming it
      */
@@ -60,7 +60,7 @@ int main(){
     cout << some_num << endl;
     cout << endl;
 
-    // You can use caputres to access variables of outer scope not
+    // You can use captures to access variables of outer scope not
     // passed as an argument
     int a = 5;
     int b = 10;
