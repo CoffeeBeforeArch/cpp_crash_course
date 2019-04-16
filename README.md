@@ -50,3 +50,4 @@ C++ Compiler: g++
 | <a href=https://youtu.be/VqKacYCwUjg>C++ Crash Course: Auto Types</a> | Dynamic Typing, Auto Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/auto_types/auto_types.cpp>auto_types.cpp</a> |
 | <a href=https://youtu.be/0-oBiDQtVGw>C++ Crash Course: For-Each Loops</a> | For-Each Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/new_for_loops/new_for_loops.cpp>new_for_loops.cpp</a> |
 | <a href=https://youtu.be/sDjG1CzUR-0>C++ Crash Course: Lambda Expressions</a> | Lambda Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/lambdas/lambdas.cpp>lambdas.cpp</a> |
+| <a href=https://youtu.be/0NxrJ1Rcl48>C++ Crash Course: Smart Pointers</a> | Smart Pointers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/smart_pointers/smart_pointers.cpp>smart_pointers.cpp</a> |
