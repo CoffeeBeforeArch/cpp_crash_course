@@ -70,7 +70,6 @@ int main(){
         non_volatile_int *= 2;
     }
 
-
     // Count up with the volatile in a loop
     for(int i = 0; i < 16; i++){
         volatile_int *= 2;
