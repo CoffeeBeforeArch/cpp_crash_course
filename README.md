@@ -15,6 +15,15 @@ C++ Compiler: g++
 
 
 ## Concepts covered in C++ Crash Course
+# C++11 Standard
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
+| <a href=https://youtu.be/VqKacYCwUjg>C++ Crash Course: Auto Types</a> | Dynamic Typing, Auto Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/auto_types/auto_types.cpp>auto_types.cpp</a> |
+| <a href=https://youtu.be/0-oBiDQtVGw>C++ Crash Course: For-Each Loops</a> | For-Each Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/new_for_loops/new_for_loops.cpp>new_for_loops.cpp</a> |
+| <a href=https://youtu.be/sDjG1CzUR-0>C++ Crash Course: Lambda Expressions</a> | Lambda Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/lambdas/lambdas.cpp>lambdas.cpp</a> |
+| <a href=https://youtu.be/0NxrJ1Rcl48>C++ Crash Course: Smart Pointers</a> | Smart Pointers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/smart_pointers/smart_pointers.cpp>smart_pointers.cpp</a> |
+
+# Basics
 | Video | Concepts | Files | PDF Tutorial |
 | ----- | -------- | ----- | ------------ |
 | <a href=https://youtu.be/vxdb7s8DE6o>C++ Crash Course: Hello, World!</a> | Comments, Main Functions, Include Statements, Namespaces, Compilation | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/getting_started/hello_world.cpp>hello_world.cpp</a> | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/pdf_tutorials/cpp_crash_course_1.pdf> Tutorial </a> |
@@ -47,9 +56,5 @@ C++ Compiler: g++
 | <a href=https://youtu.be/ofkK8IgbuuU>C++ Crash Course: Templated Classes with Multiple Implementations</a> | Unique Template Implementations | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/interface.h>interface.h</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/multi_template_impl.cpp>multi_template_impl.cpp</a> |
 | <a href=https://youtu.be/wfcvg69SfhI>C++ Crash Course: Enums</a> | Enums | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/enum.cpp>enum.cpp</a> |
 | <a href=https://youtu.be/OF24DJ8A8eQ>C++ Crash Course: Exception Handling</a> | Throwing/Handling Exceptions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/basic_exceptions.cpp>basic_exceptions.cpp</a> |
-| <a href=https://youtu.be/VqKacYCwUjg>C++ Crash Course: Auto Types</a> | Dynamic Typing, Auto Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/auto_types/auto_types.cpp>auto_types.cpp</a> |
-| <a href=https://youtu.be/0-oBiDQtVGw>C++ Crash Course: For-Each Loops</a> | For-Each Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/new_for_loops/new_for_loops.cpp>new_for_loops.cpp</a> |
-| <a href=https://youtu.be/sDjG1CzUR-0>C++ Crash Course: Lambda Expressions</a> | Lambda Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/lambdas/lambdas.cpp>lambdas.cpp</a> |
-| <a href=https://youtu.be/0NxrJ1Rcl48>C++ Crash Course: Smart Pointers</a> | Smart Pointers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/smart_pointers/smart_pointers.cpp>smart_pointers.cpp</a> |
 | <a href=https://youtu.be/infyvlpjw08>C++ Crash Course: Unions</a> | Unions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/unions.cpp>unions.cpp</a> |
 | <a href=https://youtu.be/HYcQ2OB6_2Y>C++ Crash Course: Modifier Deep Dive</a> | Static, Const, Volatile | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/modifier_deep_dive.cpp>modifier_deep_dive.cpp</a> |
