@@ -8,6 +8,7 @@
 #include "../common/naive_functions.h"
 
 using namespace std;
+using namespace std::chrono;
 
 int main(){
     // Matrices
@@ -16,7 +17,7 @@ int main(){
     // Matrix dimensions
     int m, n, k;
     m = 2000;
-    n = 200;
+    k = 200;
     n = 1000;
 
     // Scale factors
@@ -38,12 +39,24 @@ int main(){
     // Initialize the result matrix to 0s
     init_matrix<double>(C, m, n, 0);
 
-    // Compute dgemm
-    cout << "BEGINNING COMPUTATION..." << endl;
+    // Compute dgemm and record execution time
+    auto mkl_t1 = get_time();
     cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, m, n, k,
             alpha, A, k, B, n, beta, C, n);
-    cout << "COMPLETE!" << endl;
+    auto mkl_t2 = get_time();
+    auto mkl_time_span =
+        duration_cast<duration<double>>(mkl_t2 - mkl_t1);
+    cout << "Elapsed time MKL: " << mkl_time_span.count() << " s" << endl;
 
+    // Compute our own dgemm and record execution time
+    auto simple_t1 = get_time();
+    simple_gemm(A, B, C, m, n, k, alpha, beta);
+    auto simple_t2 = get_time();
+    auto simple_time_span =
+        duration_cast<duration<double>>(simple_t2 - simple_t1);
+    cout << "Elapsed time simple: " << simple_time_span.count() <<
+        " s" << endl;
+    
     // Free the memory
     mkl_free(A);
     mkl_free(B);

@@ -3,6 +3,7 @@
 // By: Nick from CoffeeBeforeArch
 
 #include <stdlib.h>
+#include <chrono>
 
 // General Matrix Multiplication
 // Arguments
@@ -24,14 +25,20 @@ void simple_gemm(T *a, T *b, T *c, int m, int n, int k, T alpha,
             temp = 0;
             // Calculate 1 element of the final matrix
             for(int l = 0; l < k; l++){
-                temp += alpha * a[i * n + l] * b[l * n + j];
+                temp += alpha * a[i * k + l] * b[l * n + j];
             }
             // Write it back to the result matrix
-            beta * c[i * n + j] += temp;
+            c[i * n + j] += beta * c[i * n + j] + temp;
         }
     }
 }
 
+// Initializes a matrix of dimension "m x n"
+// Arguments
+//  a       = Matrix
+//  m       = Number of rows
+//  n       = Number of columns
+//  value   = Specifies random numbers or 0 initialization
 template <class T>
 void init_matrix(T *a, int m, int n, T value = 1){
     for(int i = 0; i < m * n; i++){
@@ -42,3 +49,9 @@ void init_matrix(T *a, int m, int n, T value = 1){
         }
     }
 }
+
+// Helper function for getting the current time for profiling
+auto get_time(){
+    return std::chrono::high_resolution_clock::now();
+}
+
