@@ -44,6 +44,8 @@ int main(){
     cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, m, n, k,
             alpha, A, k, B, n, beta, C, n);
     auto mkl_t2 = get_time();
+
+    // Compute the execution time
     auto mkl_time_span =
         duration_cast<duration<double>>(mkl_t2 - mkl_t1);
     cout << "Elapsed time MKL: " << mkl_time_span.count() << " s" << endl;
@@ -52,11 +54,13 @@ int main(){
     auto simple_t1 = get_time();
     simple_gemm(A, B, C, m, n, k, alpha, beta);
     auto simple_t2 = get_time();
+
+    // Compute the execution time
     auto simple_time_span =
         duration_cast<duration<double>>(simple_t2 - simple_t1);
     cout << "Elapsed time simple: " << simple_time_span.count() <<
         " s" << endl;
-    
+
     // Free the memory
     mkl_free(A);
     mkl_free(B);
