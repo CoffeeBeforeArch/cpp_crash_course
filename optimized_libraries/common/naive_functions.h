@@ -11,7 +11,7 @@
 //  b       = Input matrix (k x n)
 //  c       = Result matrix (m x n)
 //  alpha   = Scaling factor for A
-//  beta    = Scaling factor for B
+//  beta    = Scaling factor for C
 template <class T>
 void simple_gemm(T *a, T *b, T *c, int m, int n, int k, T alpha,
         T beta){
@@ -28,7 +28,7 @@ void simple_gemm(T *a, T *b, T *c, int m, int n, int k, T alpha,
                 temp += alpha * a[i * k + l] * b[l * n + j];
             }
             // Write it back to the result matrix
-            c[i * n + j] += beta * c[i * n + j] + temp;
+            c[i * n + j] = beta * c[i * n + j] + temp;
         }
     }
 }
