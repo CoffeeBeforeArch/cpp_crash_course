@@ -15,14 +15,6 @@ C++ Compiler: g++
 
 
 ## Concepts covered in C++ Crash Course
-# C++11 Standard
-| Video | Concepts | Files | PDF Tutorial |
-| ----- | -------- | ----- | ------------ |
-| <a href=https://youtu.be/VqKacYCwUjg>C++ Crash Course: Auto Types</a> | Dynamic Typing, Auto Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/auto_types/auto_types.cpp>auto_types.cpp</a> |
-| <a href=https://youtu.be/0-oBiDQtVGw>C++ Crash Course: For-Each Loops</a> | For-Each Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/new_for_loops/new_for_loops.cpp>new_for_loops.cpp</a> |
-| <a href=https://youtu.be/sDjG1CzUR-0>C++ Crash Course: Lambda Expressions</a> | Lambda Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/lambdas/lambdas.cpp>lambdas.cpp</a> |
-| <a href=https://youtu.be/0NxrJ1Rcl48>C++ Crash Course: Smart Pointers</a> | Smart Pointers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/smart_pointers/smart_pointers.cpp>smart_pointers.cpp</a> |
-
 # Basics
 | Video | Concepts | Files | PDF Tutorial |
 | ----- | -------- | ----- | ------------ |
@@ -32,28 +24,57 @@ C++ Compiler: g++
 | <a href=https://youtu.be/zrPILwziC9w>C++ Crash Course: if, else, and switch Statements</a> | if/else Statements, switch Statements | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/cf_if_else_switch.cpp>cf_if_else_switch.cpp</a> |
 | <a href=https://youtu.be/idugiCtUv_o>C++ Crash Course: For Loops</a> | for Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/cf_for_loops.cpp>cf_for_loops.cpp</a> |
 | <a href=https://youtu.be/Vfk23WR-wsc>C++ Crash Course: While Loops</a> | while/do while Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/cf_while_loops.cpp>cf_while_loops.cpp</a> |
-| <a href=https://youtu.be/S_FCmt4Qljc>C++ Crash Course: Nested Control Flow </a> | Nested Control Flow | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/cf_nested.cpp>cf_nested.cpp</a>  | 
+| <a href=https://youtu.be/S_FCmt4Qljc>C++ Crash Course: Nested Control Flow </a> | Nested Control Flow | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/cf_nested.cpp>cf_nested.cpp</a>  |
+
+# Functions
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
 | <a href=https://youtu.be/IzngN4PsL3M>C++ Crash Course: Functions</a> | Builtin Functions, User-Defined Functions, Return Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/functions.cpp>functions.cpp</a> |
 | <a href=https://youtu.be/8pb6jZ-ocIg>C++ Crash Course: Function Overloading</a> | Overloading | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/function_overloading.cpp>function_overloading.cpp</a> |
 | <a href=https://youtu.be/cCiy1lG5VcQ>C++ Crash Course: Pass by Value and Reference</a> | Pass by Value, Pass by Reference | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/pbv_pbr.cpp>pbv_pbr.cpp</a> |
 | <a href=https://youtu.be/p8nvWs32Mlc>C++ Crash Course: Recursion</a> | Recursive Functions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/recursion.cpp>recursion.cpp</a> |
-| <a href=https://youtu.be/YfB8NUKOnlA>C++ Crash Course: User Defined Libraries</a> | User Defined Libraries, Function Prototypes, Include Files | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/user_libraries/call_lib.cpp>call_lib.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/user_libraries/example_lib.cpp>example_lib.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/user_libraries/example_lib.h>example_lib.h</a> |
+
+
+# Pointers and Memory
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
 | <a href=https://youtu.be/t-Sihd6LhKM>C++ Crash Course: Pointers</a> | Pointers, Referenfces | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/arrays_and_pointers/pointers.cpp>pointers.cpp</a> |
 | <a href=https://youtu.be/kZ3_eLKW_TQ>C++ Crash Course: Arrays</a> | Arrays, Memory, Pointer Arithmetic | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/arrays_and_pointers/arrays.cpp>arrays.cpp</a> |
+| <a href=https://youtu.be/jdwcMhSmb-c>C++ Crash Course: Scoping and Memory</a> | Stack, Heap, Allocation, De-Allocate | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/memory_management/scoping_and_memory.cpp>scoping_and_memory.cpp</a> |
+| <a href=https://youtu.be/tOLsCxeytuk>C++ Crash Course: Vectors</a> | Vectors | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/standard_library/vectors.cpp>vectors.cpp</a> |
+| <a href=https://youtu.be/ar7Xc7VK2W4>C++ Crash Course: Strings</a> | Strings | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/standard_library/string.cpp>string.cpp</a> |
+
+# Object Oriented Programming
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
 | <a href=https://youtu.be/Lr2c6hoVUz8>C++ Crash Course: Classes</a> | Classes, Methods, Access | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/classes_intro/simple_class.cpp>simple_class.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/classes_intro/implementation.cpp>implementation.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/classes_intro/interface.h>interface.h</a> |
 | <a href=https://youtu.be/9w7b82E2d8w>C++ Crash Course: Constructors and Access</a> | Constructors, Access Permissions, Default Constructors | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/constructors_and_access/constructors_and_access.cpp>constructors_and_access.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/constructors_and_access/implementation.cpp>implementation.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/constructors_and_access/interface.h>interface.h</a> |
 | <a href=https://youtu.be/uIy4yYz309c>C++ Crash Course: Copy Constructors</a> | Copy Constructors, Default Copy Constructors | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/copy_constructor/copy_constructor.cpp>copy_constructor.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/copy_constructor/implementation.cpp>implementation.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/copy_constructor/interface.h>interface.h</a> |
-| <a href=https://youtu.be/QfglM8DGEgA>C++ Crash Course: File I/O Using fstream</a> | fstream, I/O | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/file_io/rw_file.cpp>rw_file.cpp</a> |
-| <a href=https://youtu.be/tOLsCxeytuk>C++ Crash Course: Vectors</a> | Vectors | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/standard_library/vectors.cpp>vectors.cpp</a> |
-| <a href=https://youtu.be/ar7Xc7VK2W4>C++ Crash Course: Strings</a> | Strings | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/standard_library/string.cpp>string.cpp</a> |
 | <a href=https://youtu.be/m1NCUmrtxUE>C++ Crash Course: Inheritance</a> | Inheritance, Base Class, Derived Class | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/inheritance/inheritance.cpp>inheritance.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/inheritance/interface.h>interface.cpp</a> |
 | <a href=https://youtu.be/GWbajBieuB0>C++ Crash Course: Polymorphism</a> | Polymorphism, Dynamic Dispatch, Virtual, Abstract Classes | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/polymorphism/polymorphism.cpp>polymorphism.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/polymorphism/interface.h>interface.h</a> |
-| <a href=https://youtu.be/jdwcMhSmb-c>C++ Crash Course: Scoping and Memory</a> | Stack, Heap, Allocation, De-Allocate | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/memory_management/scoping_and_memory.cpp>scoping_and_memory.cpp</a> |
 | <a href=https://youtu.be/MkVk9DGeLdM>C++ Crash Course: Destructors and Misc.</a> | Destructors, Deep Copy, Shallow Copy, this, -> Operator | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/tree/master/fundamental_concepts/classes/destructors_and_misc/destructors_and_mis.cpp>destructors_and_misc.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/tree/master/fundamental_concepts/classes/destructors_and_misc/interface.h>interface.h</a> |
 | <a href=https://youtu.be/89bRu7izY_g>C++ Crash Course: Operator Overloading and Structures</a> | Operator Overloading, Structures | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/classes/structs_and_ops/structs_and_ops.cpp>structs_and_ops.cpp</a> |
+
+# Templates
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
 | <a href=https://youtu.be/thiRuzij5C4>C++ Crash Course: Function Templates</a> | Templates, Compiler Generated Code | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/templated_functions.cpp>templated_functions.cpp</a> |
 | <a href=https://youtu.be/thiRuzij5C4>C++ Crash Course: Class Templates</a> | Templates, Templated Classes | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/templated_class/interface.h>interface.h</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/templated_class/templated_class.cpp>templaed_class.cpp</a> |
 | <a href=https://youtu.be/ofkK8IgbuuU>C++ Crash Course: Templated Classes with Multiple Implementations</a> | Unique Template Implementations | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/interface.h>interface.h</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/multi_template_impl.cpp>multi_template_impl.cpp</a> |
+
+# C++11 Standard
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
+| <a href=https://youtu.be/VqKacYCwUjg>C++ Crash Course: Auto Types</a> | Dynamic Typing, Auto Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/auto_types/auto_types.cpp>auto_types.cpp</a> |
+| <a href=https://youtu.be/0-oBiDQtVGw>C++ Crash Course: For-Each Loops</a> | For-Each Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/new_for_loops/new_for_loops.cpp>new_for_loops.cpp</a> |
+| <a href=https://youtu.be/sDjG1CzUR-0>C++ Crash Course: Lambda Expressions</a> | Lambda Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/lambdas/lambdas.cpp>lambdas.cpp</a> |
+| <a href=https://youtu.be/0NxrJ1Rcl48>C++ Crash Course: Smart Pointers</a> | Smart Pointers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/smart_pointers/smart_pointers.cpp>smart_pointers.cpp</a> |
+
+# Misc.
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
+| <a href=https://youtu.be/YfB8NUKOnlA>C++ Crash Course: User Defined Libraries</a> | User Defined Libraries, Function Prototypes, Include Files | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/user_libraries/call_lib.cpp>call_lib.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/user_libraries/example_lib.cpp>example_lib.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/user_libraries/example_lib.h>example_lib.h</a> |
+| <a href=https://youtu.be/QfglM8DGEgA>C++ Crash Course: File I/O Using fstream</a> | fstream, I/O | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/file_io/rw_file.cpp>rw_file.cpp</a> |
 | <a href=https://youtu.be/wfcvg69SfhI>C++ Crash Course: Enums</a> | Enums | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/enum.cpp>enum.cpp</a> |
 | <a href=https://youtu.be/OF24DJ8A8eQ>C++ Crash Course: Exception Handling</a> | Throwing/Handling Exceptions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/basic_exceptions.cpp>basic_exceptions.cpp</a> |
 | <a href=https://youtu.be/infyvlpjw08>C++ Crash Course: Unions</a> | Unions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/unions.cpp>unions.cpp</a> |
