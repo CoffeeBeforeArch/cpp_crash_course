@@ -51,7 +51,7 @@ void init_matrix(T *a, int m, int n, T value = 1){
 }
 
 // Helper function for getting the current time for profiling
-auto get_time(){
+std::chrono::high_resolution_clock::time_point get_time(){
     return std::chrono::high_resolution_clock::now();
 }
 
