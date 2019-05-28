@@ -36,8 +36,8 @@ int main(){
     auto end = get_time();
 
     // Compute the execution time
-    auto span = duration_cast<duration<double, nano>>(end - begin);
-    cout << "Elapsed time : " << span.count() << " ns" << endl;
+    auto span = duration_cast<duration<double>>(end - begin);
+    cout << "Elapsed time : " << span.count() << " s" << endl;
 
     // Free memory
     delete [] a;
