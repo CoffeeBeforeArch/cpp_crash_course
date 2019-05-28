@@ -69,6 +69,13 @@ C++ Compiler: g++
 | <a href=https://youtu.be/0-oBiDQtVGw>C++ Crash Course: For-Each Loops</a> | For-Each Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/new_for_loops/new_for_loops.cpp>new_for_loops.cpp</a> |
 | <a href=https://youtu.be/sDjG1CzUR-0>C++ Crash Course: Lambda Expressions</a> | Lambda Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/lambdas/lambdas.cpp>lambdas.cpp</a> |
 | <a href=https://youtu.be/0NxrJ1Rcl48>C++ Crash Course: Smart Pointers</a> | Smart Pointers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/smart_pointers/smart_pointers.cpp>smart_pointers.cpp</a> |
+| <a href=https://youtu.be/GeqHsNB_yys>C++ Crash Course: High Resolution Clocks</a> | Hight Resolution Clocks | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/chrono/timing.cpp>timing.cpp</a> |
+
+# Optimizations
+| Video | Concepts | Files | PDF Tutorial |
+| ----- | -------- | ----- | ------------ |
+| <a href=https://youtu.be/PxMCthwZ8pw>C++ Crash Course: Intel MKL DGEMM</a> | MKL, DGEMM | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/mkl/dgemm.cpp>dgemm.cpp</a> |
+| <a href=https://youtu.be/ee932A3iJwc>C++ Crash Course: Intro to SIMD Intrinsics</a> | Intel, SIMD, Intrinsics | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/simd_intrinsics/hello_avx.cpp>hello_avx.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/simd_intrinsics/baseline.cpp>baseline.cpp</a> |
 
 # Misc.
 | Video | Concepts | Files | PDF Tutorial |
