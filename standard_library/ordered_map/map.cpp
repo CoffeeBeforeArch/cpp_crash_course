@@ -23,7 +23,7 @@ int main(){
    
     // Let's use strings as the key to our map
     string animal1 = "aardvark";
-    string animal2 = "bee";
+    string animal2 = "baboon";
     string animal3 = "zebra";
 
     // Create an ordered map indexed by the key
