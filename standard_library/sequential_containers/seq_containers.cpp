@@ -8,6 +8,7 @@
 #include <forward_list>
 #include <string>
 #include <array>
+#include <deque>
 #include <algorithm>
 
 using namespace std;
@@ -72,12 +73,29 @@ int main(){
     print_container(int_list);
     int_list.insert(int_list.begin(), 7);
     print_container(int_list);
-    cout << endl;
 
     // Benefit of list is that we can traverse backwards
-    itr = int_list.end();
-    itr--;
-    cout << *itr << endl;
+    for(auto r_itr = int_list.rbegin(); r_itr != int_list.rend(); r_itr++){
+        cout << *r_itr << " ";
+    }
+    cout << endl << endl;
+
+    // Deques are doubly ended queues
+    // Specify a type
+    // Fast random access and insert/delete at front or back
+    deque<int> int_deque;
+    for(int i = 0; i < 5; i++){
+        int_deque.push_back(i);
+    }
+
+    // Print the deque
+    // Insert some elements at the front and print again
+    cout << "Deque" << endl;
+    print_container(int_deque);
+    int_deque.push_front(5);
+    int_deque.push_front(6);
+    int_deque.push_front(7);
+    print_container(int_deque);
 
     return 0;
 }
