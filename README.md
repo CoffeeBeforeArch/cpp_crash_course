@@ -61,6 +61,7 @@ C++ Compiler: g++
 | <a href=https://youtu.be/thiRuzij5C4>C++ Crash Course: Function Templates</a> | Templates, Compiler Generated Code | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/templated_functions.cpp>templated_functions.cpp</a> |
 | <a href=https://youtu.be/thiRuzij5C4>C++ Crash Course: Class Templates</a> | Templates, Templated Classes | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/templated_class/interface.h>interface.h</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/templated_class/templated_class.cpp>templaed_class.cpp</a> |
 | <a href=https://youtu.be/ofkK8IgbuuU>C++ Crash Course: Templated Classes with Multiple Implementations</a> | Unique Template Implementations | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/interface.h>interface.h</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/multi_template_impl.cpp>multi_template_impl.cpp</a> |
+| <a href=https://youtu.be/9D8uPKDffdI>C++ Crash Course: Variadic Templates</a> | Variadic Templates | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/variadic_templates/variadic_templates.cpp>variadic_templates.cpp</a> |
 
 # C++11 Standard
 | Video | Concepts | Files | PDF Tutorial |
@@ -69,7 +70,10 @@ C++ Compiler: g++
 | <a href=https://youtu.be/0-oBiDQtVGw>C++ Crash Course: For-Each Loops</a> | For-Each Loops | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/new_for_loops/new_for_loops.cpp>new_for_loops.cpp</a> |
 | <a href=https://youtu.be/sDjG1CzUR-0>C++ Crash Course: Lambda Expressions</a> | Lambda Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/lambdas/lambdas.cpp>lambdas.cpp</a> |
 | <a href=https://youtu.be/0NxrJ1Rcl48>C++ Crash Course: Smart Pointers</a> | Smart Pointers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/smart_pointers/smart_pointers.cpp>smart_pointers.cpp</a> |
-| <a href=https://youtu.be/GeqHsNB_yys>C++ Crash Course: High Resolution Clocks</a> | Hight Resolution Clocks | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/chrono/timing.cpp>timing.cpp</a> |
+| <a href=https://youtu.be/GeqHsNB_yys>C++ Crash Course: High Resolution Clocks</a> | High Resolution Clocks | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/chrono/timing.cpp>timing.cpp</a> |
+| <a href=https://youtu.be/2qplocJdY5A>C++ Crash Course: Unordered Maps</a> | Unordered Maps, Hash Table | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/unordered_map/unordered.cpp>unordered_map.cpp</a> |
+| <a href=https://youtu.be/cKOPPsjOijI>C++ Crash Course: Ordered Maps</a> | Ordered Maps, RB Tree | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/ordered_map/map.cpp>map.cpp</a> |
+| <a href=https://youtu.be/6rVMRh-92TA>C++ Crash Course: Sequential Containers</a> | Array, List, Forward List, Deque, Vector, String | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/sequential_containers/seq_containers.cpp>seq_containers.cpp</a> |
 
 # Optimizations
 | Video | Concepts | Files | PDF Tutorial |
