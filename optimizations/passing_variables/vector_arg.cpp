@@ -14,7 +14,7 @@ using namespace std;
 vector<int> load_numbers_value(vector<int> v, int iter){
     // Print out the size and capacity on a specific iteration
     if(iter){
-        cout << "From function: load_numbers_ref" << endl;
+        cout << "From function: load_numbers_value" << endl;
         cout << "Size: " << v.size() << " Capacity: " << v.capacity()
             << endl;
     }
@@ -51,7 +51,7 @@ vector<int> load_numbers_value(vector<int> v, int iter){
 vector<int> load_numbers_rvalue_ref_1(vector<int>&& v, int iter){
     // Print out the size and capacity on a specific iteration
     if(iter){
-        cout << "From function: load_numbers_ref" << endl;
+        cout << "From function: load_numbers_rvalue_ref_1" << endl;
         cout << "Size: " << v.size() << " Capacity: " << v.capacity()
             << endl;
     }
@@ -89,7 +89,7 @@ vector<int> load_numbers_rvalue_ref_1(vector<int>&& v, int iter){
 vector<int> load_numbers_rvalue_ref_2(vector<int>&& v, int iter){
     // Print out the size and capacity on a specific iteration
     if(iter){
-        cout << "From function: load_numbers_ref" << endl;
+        cout << "From function: load_numbers_rvalue_ref_2" << endl;
         cout << "Size: " << v.size() << " Capacity: " << v.capacity()
             << endl;
     }
