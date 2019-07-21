@@ -1,5 +1,6 @@
 // This benchmark is a basic example of how to use Google benchmark
 // for studying the memory hierarchy
+// By: Nick from CoffeeBeforeArch
 
 #include <benchmark/benchmark.h>
 #include <vector>
