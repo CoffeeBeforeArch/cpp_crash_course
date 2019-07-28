@@ -37,7 +37,7 @@ void same_var(){
     thread t2([&](){ work(a); });
     thread t3([&](){ work(a); });
     thread t4([&](){ work(a); });
-
+    
     // Join the threads
     t1.join();
     t2.join();
@@ -53,16 +53,16 @@ void same_var(){
 void diff_var(){
     atomic<int> a;
     a = 0;
-    cout << "Addres of a: " << &a << endl;
+    cout << "Address of a: " << &a << endl;
     atomic<int> b;
     b = 0;
-    cout << "Addres of b: " << &b << endl;
+    cout << "Address of b: " << &b << endl;
     atomic<int> c;
     c = 0;
-    cout << "Addres of c: " << &c << endl;
+    cout << "Address of c: " << &c << endl;
     atomic<int> d;
     d = 0;
-    cout << "Addres of a: " << &d << endl;
+    cout << "Address of d: " << &d << endl;
 
     // Creat four threads and use lambda to launch work
     thread t1([&](){ work(a); });
@@ -87,16 +87,16 @@ struct alignas(64) aligned_type{
 void diff_line(){
     aligned_type a;
     a.a = 0;
-    cout << "Addres of a: " << &a << endl;
+    cout << "Address of a: " << &a << endl;
     aligned_type b;
     b.a = 0;
-    cout << "Addres of b: " << &b << endl;
+    cout << "Address of b: " << &b << endl;
     aligned_type c;
     c.a = 0;
-    cout << "Addres of c: " << &c << endl;
+    cout << "Address of c: " << &c << endl;
     aligned_type d;
     d.a = 0;
-    cout << "Addres of a: " << &d << endl;
+    cout << "Address of d: " << &d << endl;
 
     // Launch the four threads now using our aligned data
     thread t1([&](){ work(a.a); });
@@ -113,9 +113,10 @@ void diff_line(){
 
 
 int main(){
-    //single_thread();
+    single_thread();
     //same_var();
     //diff_var();
-    diff_line();
+    //diff_line();
     return 0;
 }
+
