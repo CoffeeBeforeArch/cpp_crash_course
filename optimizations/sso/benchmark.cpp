@@ -24,7 +24,9 @@ static void stringBench(benchmark::State &s){
         }
     }
 }
+// Register the benchmark and specify a range of string values
 BENCHMARK(stringBench)->DenseRange(0,32);
 
+// Benchmark main function
 BENCHMARK_MAIN();
 
