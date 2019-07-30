@@ -15,7 +15,7 @@ static void stringBench(benchmark::State &s){
     vector<string> v;
     v.resize(10000);
 
-    // Now let's emplace back a ton of strings
+    // Now let's push back a ton of strings
     while(s.KeepRunning()){
         for(int i = 0; i < 10000; i++){
             // Create the string of a specified size
