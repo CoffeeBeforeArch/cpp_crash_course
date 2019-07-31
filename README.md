@@ -63,7 +63,7 @@ C++ Compiler: g++
 | <a href=https://youtu.be/ofkK8IgbuuU>C++ Crash Course: Templated Classes with Multiple Implementations</a> | Unique Template Implementations | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/interface.h>interface.h</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/multi_template_impl/multi_template_impl.cpp>multi_template_impl.cpp</a> |
 | <a href=https://youtu.be/9D8uPKDffdI>C++ Crash Course: Variadic Templates</a> | Variadic Templates | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/templates/variadic_templates/variadic_templates.cpp>variadic_templates.cpp</a> |
 
-# C++11 Standard
+# C++11/14/17/20 Standard Library
 | Video | Concepts | Files | PDF Tutorial |
 | ----- | -------- | ----- | ------------ |
 | <a href=https://youtu.be/VqKacYCwUjg>C++ Crash Course: Auto Types</a> | Dynamic Typing, Auto Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/auto_types/auto_types.cpp>auto_types.cpp</a> |
@@ -74,12 +74,19 @@ C++ Compiler: g++
 | <a href=https://youtu.be/2qplocJdY5A>C++ Crash Course: Unordered Maps</a> | Unordered Maps, Hash Table | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/unordered_map/unordered.cpp>unordered_map.cpp</a> |
 | <a href=https://youtu.be/cKOPPsjOijI>C++ Crash Course: Ordered Maps</a> | Ordered Maps, RB Tree | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/ordered_map/map.cpp>map.cpp</a> |
 | <a href=https://youtu.be/6rVMRh-92TA>C++ Crash Course: Sequential Containers</a> | Array, List, Forward List, Deque, Vector, String | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/sequential_containers/seq_containers.cpp>seq_containers.cpp</a> |
+| <a href=https://youtu.be/DK-Z535nEJg>C++ Crash Course: Init Condition Statements</a> | C++17, Init Conditions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/init_condition/init.cpp>init.cpp</a> |
+| <a href=https://youtu.be/uhVL96KLIjA>C++ Crash Course: Fold Expressions</a> | C++17, Fold Expressions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/standard_library/fold_expression/fold.cpp>fold.cpp</a> |
 
 # Optimizations
 | Video | Concepts | Files | PDF Tutorial |
 | ----- | -------- | ----- | ------------ |
 | <a href=https://youtu.be/PxMCthwZ8pw>C++ Crash Course: Intel MKL DGEMM</a> | MKL, DGEMM | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/mkl/dgemm.cpp>dgemm.cpp</a> |
 | <a href=https://youtu.be/ee932A3iJwc>C++ Crash Course: Intro to SIMD Intrinsics</a> | Intel, SIMD, Intrinsics | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/simd_intrinsics/hello_avx.cpp>hello_avx.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/simd_intrinsics/baseline.cpp>baseline.cpp</a> |
+| <a href=https://youtu.be/6LVdHOMiTkk>C++ Crash Course: Optimizing Function Calls</a> | Move Semantics, Copy Constructors, Fitted Containers | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/passing_variables/vector_arg.cpp>vector_arg.cpp</a><br> <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/passing_variables/vector_arg_simple.cpp>vector_arg_simple.cpp</a>|
+| <a href=https://youtu.be/eKODykkIZTE>C++ Crash Course: Google Benchmark</a> | Google Benchmark | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/google_benchmark/cacheBench.cpp>cacheBench.cpp</a> |
+| <a href=https://youtu.be/5jnqd00N0pI>C++ Crash Course: Struct Layout</a> | Memory Layout, Padding, Packing | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/memory_layout/struct.cpp>struct.cpp</a> |
+| <a href=https://youtu.be/O0HCGOzFLm0>C++ Crash Course: False Sharing</a> | Atomics, Threads, Caches, False Sharing | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/false_sharing/false_sharing.cpp>false_sharing.cpp</a> |
+| <a href=https://youtu.be/V5-aCRH7YZk>C++ Crash Course: Short String Optimization</a> | Memory Layout, Padding, Packing | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/sso/sso.cpp>sso.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/optimizations/sso/benchmark.cpp>benchmark.cpp</a> |
 
 # Misc.
 | Video | Concepts | Files | PDF Tutorial |
@@ -91,3 +98,6 @@ C++ Compiler: g++
 | <a href=https://youtu.be/infyvlpjw08>C++ Crash Course: Unions</a> | Unions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/unions.cpp>unions.cpp</a> |
 | <a href=https://youtu.be/HYcQ2OB6_2Y>C++ Crash Course: Modifier Deep Dive</a> | Static, Const, Volatile | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/modifier_deep_dive.cpp>modifier_deep_dive.cpp</a> |
 | <a href=https://youtu.be/n-8RoaIo4k4>C++ Crash Course: Iterators</a> | Iterators | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/iterators/iterators.cpp>iterators.cpp</a> |
+| <a href=https://youtu.be/L95ABozCKSQ>C++ Crash Course: Header Guards</a> | Header Guards | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/header_guards/main.cpp>main.cpp</a> |
+| <a href=https://youtu.be/Vi-N4xSNDr8>C++ Crash Course: The One Definition Rule</a> | Header Guards, One Definition Rule | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/advanced_guards/main.cpp>main.cpp</a><br><a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/misc_topics/advanced_guards/cube.cpp>cube.cpp</a>|
+
