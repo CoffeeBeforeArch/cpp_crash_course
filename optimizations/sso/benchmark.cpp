@@ -13,7 +13,7 @@ static void stringBench(benchmark::State &s){
 
     // Vector for holding the strings
     vector<string> v;
-    v.resize(10000);
+    v.reserve(10000);
 
     // Now let's push back a ton of strings
     while(s.KeepRunning()){
