@@ -4,7 +4,6 @@
 
 #include <benchmark/benchmark.h>
 #include <cstdlib>
-#include <iostream>
 #include <immintrin.h>
 
 using namespace std;
