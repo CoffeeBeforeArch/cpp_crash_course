@@ -10,8 +10,8 @@ static void assocBench(benchmark::State &s){
     int step = 1 << s.range(0);
     
     // Size of the array is constant (32MB)
-    int N = 1 << 14;
-    int *a = new int[N];
+    int N = 1 << 25;
+    char *a = new char[N];
 
     // Initialize the array with some random numbers
     for(int i = 0; i < N; i++){
@@ -22,16 +22,19 @@ static void assocBench(benchmark::State &s){
     while(s.KeepRunning()){
         int i = 0;
         // Perform 10k accesses
-        for(int iter = 0; iter < N; iter++){
+        for(int iter = 0; iter < 10000; iter++){
             // Just increment this int
             a[i]++;
             // Wrap back around to the beginning of the array
             i = (i + step) % N;
         }
     }
+
+    // Free the memory
+    delete [] a;
 }
 // Register the benchmark
-BENCHMARK(assocBench)->DenseRange(0, 10);
+BENCHMARK(assocBench)->DenseRange(0, 16)->Unit(benchmark::kMicrosecond);
 
 // Benchmark main function
 BENCHMARK_MAIN();
