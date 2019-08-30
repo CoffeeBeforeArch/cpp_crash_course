@@ -6,7 +6,7 @@
 
 // Accesses an array sequentially in row-major fashion
 static void rowMajor(benchmark::State &s){
-    // Create a very large array (32MB)
+    // Create a very large array (64MB)
     int N = 1 << 12;
     int *array = new int[N * N];
 
@@ -24,7 +24,7 @@ BENCHMARK(rowMajor)->Unit(benchmark::kMillisecond);
 
 // Accesses an array sequentially in column-major fashion
 static void columnMajor(benchmark::State &s){
-    // Create a very large array (32MB)
+    // Create a very large array (64MB)
     int N = 1 << 12;
     int *array = new int[N * N];
 
@@ -42,7 +42,7 @@ BENCHMARK(columnMajor)->Unit(benchmark::kMillisecond);
 
 // Accesses an array fairly randomly
 static void randomStride(benchmark::State &s){
-    // Create a very large array (32MB)
+    // Create a very large array (64MB)
     int N = 1 << 12;
     int *array = new int[N * N];
 
