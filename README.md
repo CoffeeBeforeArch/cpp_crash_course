@@ -29,10 +29,10 @@ C++ Compiler: g++
 # Functions
 | Video | Concepts | Files |
 | ----- | -------- | ----- |
-| <a href=https://youtu.be/IzngN4PsL3M>C++ Crash Course: Functions</a> | Builtin Functions, User-Defined Functions, Return Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/functions.cpp>functions.cpp</a> |
-| <a href=https://youtu.be/8pb6jZ-ocIg>C++ Crash Course: Function Overloading</a> | Overloading | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/function_overloading.cpp>function_overloading.cpp</a> |
-| <a href=https://youtu.be/cCiy1lG5VcQ>C++ Crash Course: Pass by Value and Reference</a> | Pass by Value, Pass by Reference | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/pbv_pbr.cpp>pbv_pbr.cpp</a> |
-| <a href=https://youtu.be/p8nvWs32Mlc>C++ Crash Course: Recursion</a> | Recursive Functions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/recursion.cpp>recursion.cpp</a> |
+| <a href=https://youtu.be/IzngN4PsL3M>C++ Crash Course: Functions</a> | Builtin Functions, User-Defined Functions, Return Types | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/basics/functions.cpp>functions.cpp</a> |
+| <a href=https://youtu.be/8pb6jZ-ocIg>C++ Crash Course: Function Overloading</a> | Overloading | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/overloading/function_overloading.cpp>function_overloading.cpp</a> |
+| <a href=https://youtu.be/cCiy1lG5VcQ>C++ Crash Course: Pass by Value and Reference</a> | Pass by Value, Pass by Reference | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/argument_passing/pbv_pbr.cpp>pbv_pbr.cpp</a> |
+| <a href=https://youtu.be/p8nvWs32Mlc>C++ Crash Course: Recursion</a> | Recursive Functions | <a href=https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/functions/recursion/recursion.cpp>recursion.cpp</a> |
 
 
 # Pointers and Memory
