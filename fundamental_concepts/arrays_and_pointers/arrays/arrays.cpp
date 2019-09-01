@@ -16,7 +16,8 @@ int main(){
 
     // Print out array
     for(int i = 0; i < 10; i++){
-        cout << "Index " << i << ", value " << a[i] << ", address " << &a[i] << endl;
+        cout << "Index " << i << ", value " << a[i] << ", address "
+            << &a[i] << endl;
     }
     cout << endl;
 
@@ -31,7 +32,7 @@ int main(){
     int *ptr = b;
     cout << "b[0] = *ptr = " << *ptr << endl;
     ptr++;
-    cout << "b[1] = *(ptr++) = " << *ptr << endl;
+    cout << "b[1] = *(++ptr) = " << *ptr << endl;
     cout << endl;
 
     // These letters can be changed!

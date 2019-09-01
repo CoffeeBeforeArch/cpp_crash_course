@@ -27,10 +27,10 @@ int main() {
     // Call pass by value implementation
     multiply_pbv(multiplier, multiplicand, product);
 
-    // Print out product again
+    // Print out product again (no change!)
     cout << "Main function product is " << product << endl;
 
-    // Call pass by reference
+    // Call pass by reference (product is updated!)
     multiply_pbr(multiplier, multiplicand, product);
 
     // Print out product again
