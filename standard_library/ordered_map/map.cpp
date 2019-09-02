@@ -7,38 +7,38 @@
 
 using namespace std;
 
-int main(){
-    map<int, int> ordered_map;
+int main() {
+  map<int, int> ordered_map;
 
-    // Add three elements to the map
-    ordered_map[9] = 9 * 9;
-    ordered_map[4] = 4 * 4;
-    ordered_map[1] = 1 * 1;
+  // Add three elements to the map
+  ordered_map[9] = 9 * 9;
+  ordered_map[4] = 4 * 4;
+  ordered_map[1] = 1 * 1;
 
-    // Print keys and values of the map
-    // Implemented with a self-balancing red-black tree
-    for(auto itr = ordered_map.begin(); itr != ordered_map.end(); itr++){
-        cout << "Key: " << itr->first << " Value: " << itr->second << endl;
-    }
-   
-    // Let's use strings as the key to our map
-    string animal1 = "aardvark";
-    string animal2 = "baboon";
-    string animal3 = "zebra";
+  // Print keys and values of the map
+  // Implemented with a self-balancing red-black tree
+  for (auto itr = ordered_map.begin(); itr != ordered_map.end(); itr++) {
+    cout << "Key: " << itr->first << " Value: " << itr->second << endl;
+  }
 
-    // Create an ordered map indexed by the key
-    map<string, int> animals;
+  // Let's use strings as the key to our map
+  string animal1 = "aardvark";
+  string animal2 = "baboon";
+  string animal3 = "zebra";
 
-    // Insert using the insert method
-    animals.insert(make_pair(animal3, 10));
-    animals.insert(make_pair(animal2, 10));
-    animals.insert(make_pair(animal1, 10));
+  // Create an ordered map indexed by the key
+  map<string, int> animals;
 
-    // Print out the contents of the map
-    // Note: This is sorted lexicographic order for strings
-    for(auto itr = animals.begin(); itr != animals.end(); itr++){
-        cout << "Key: " << itr->first << " Value: " << itr->second << endl;
-    }
-    
-    return 0;
+  // Insert using the insert method
+  animals.insert(make_pair(animal3, 10));
+  animals.insert(make_pair(animal2, 10));
+  animals.insert(make_pair(animal1, 10));
+
+  // Print out the contents of the map
+  // Note: This is sorted lexicographic order for strings
+  for (auto itr = animals.begin(); itr != animals.end(); itr++) {
+    cout << "Key: " << itr->first << " Value: " << itr->second << endl;
+  }
+
+  return 0;
 }
