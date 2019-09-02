@@ -6,20 +6,20 @@
 
 using namespace std;
 
-int main(){
-    // Create a new integer array using our class
-    IntegerArray ia1(10);
+int main() {
+  // Create a new integer array using our class
+  IntegerArray ia1(10);
 
-    // Fill the array with some values
-    for(int i = 0; i < ia1.size; i++){
-        ia1.data[i] = i;
-    }
+  // Fill the array with some values
+  for (int i = 0; i < ia1.size; i++) {
+    ia1.data[i] = i;
+  }
 
-    // Copy the object, but this will only be destroyed after it leaves
-    // the scope of the if statement
-    if(true){
-        IntegerArray ia2 = ia1;
-    }
+  // Copy the object, but this will only be destroyed after it leaves
+  // the scope of the if statement
+  if (true) {
+    IntegerArray ia2 = ia1;
+  }
 
-    return 0;
+  return 0;
 }

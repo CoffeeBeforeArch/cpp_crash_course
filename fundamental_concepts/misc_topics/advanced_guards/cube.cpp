@@ -2,6 +2,4 @@
 // By: Nick from CoffeeBeforeArch
 #include "square.h"
 
-int cube(int a){
-    return square(a) * a;
-}
+int cube(int a) { return square(a) * a; }
