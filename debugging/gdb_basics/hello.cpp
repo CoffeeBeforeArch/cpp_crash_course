@@ -7,9 +7,8 @@
 
 using namespace std;
 
-int main(){
-    const string s("Hello, world!");
-    cout << s << endl;
-    return 0;
+int main() {
+  const string s("Hello, world!");
+  cout << s << endl;
+  return 0;
 }
-
