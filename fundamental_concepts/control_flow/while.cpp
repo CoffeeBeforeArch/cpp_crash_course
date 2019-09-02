@@ -6,14 +6,14 @@
 
 using namespace std;
 
-int main(){
+int main() {
     // Declare and initialize variables
     int multiplicand = 5;
     int multiplier = 10;
     int product = 0;
 
     // Compute 5 * 10 using addition
-    while(multiplier > 0){
+    while (multiplier > 0) {
         product += multiplicand;
         multiplier--;
     }
@@ -21,10 +21,10 @@ int main(){
 
     // Reset product, leave multiplier still at 0
     product = 0;
-    do{
+    do {
         product += multiplicand;
         multiplier--;
-    }while(multiplier > 0);
+    } while (multiplier > 0);
     cout << "Multiplier = " << multiplier << ", product = " << product << endl;
 
     return 0;

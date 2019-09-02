@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     // Declare and initialize variables
     int multiplicand = 5;
     int multiplier = 10;
@@ -13,12 +13,12 @@ int main(){
 
     // Compute 5 * 10 using addition
     cout << "Before loop. Product = " << product << endl;
-    for(int i = 0; i < multiplier; i++){
+    for (int i = 0; i < multiplier; i++) {
         product += multiplicand;
         // Print out the 5th iteration
-        if(i == 4){
+        if (i == 4) {
             cout << "Iteration " << i << ": Product = " << product << endl;
-        }else{
+        } else {
             // Immediatly proceed to next iteration
             continue;
         }
