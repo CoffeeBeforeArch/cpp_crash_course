@@ -1,9 +1,12 @@
-// This program shows off arrays and pointer arithmetic in C++
+// This program shows off arrays in the standard library
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
+#include <array>
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::array;
 
 int main() {
   // Declare integer array
