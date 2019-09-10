@@ -1,14 +1,11 @@
 // This program initializes some variables and performs
-// some arithmetic operations on them. It also prints a
-// string.
+// some arithmetic operations on them.
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
-#include <string>
 
 using std::cout;
 using std::endl;
-using std::string;
 
 int main() {
   // Declare variables
@@ -20,14 +17,14 @@ int main() {
   a = 5.823;
   b = 10.123;
 
-  // Declare and initialize a string
-  string some_string = "Hey there, fella!";
+  // Declare and initialize in the same line
+  auto i = 10;
 
   // Compute the sum
   sum = a + b;
 
   // Print string and sum
-  cout << some_string << endl;
+  cout << "Integer: " << i << endl;
   cout << "The sum of " << a << " and " << b << " is " << sum << endl;
 
   return 0;
