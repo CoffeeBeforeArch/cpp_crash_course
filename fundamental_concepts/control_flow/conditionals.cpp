@@ -11,12 +11,15 @@ int main() {
   int a = 5;
   int b = 10;
 
-  // if statement
+  // For "if" statements, the encompassed code is only executed if the
+  // condition is True.
   if (a == 5) {
     cout << "Inside if statement (a == " << a << ")" << endl;
   }
 
-  // if and else statements
+  // We can do multiple checks using chained "if"/"else" statements
+  // Only 1 of these conditions is every executed
+  /*
   if (a > 5) {
     cout << "a > 5 (within if)" << endl;
   } else if (b == 10) {
@@ -24,18 +27,22 @@ int main() {
   } else {
     cout << "Any other case!" << endl;
   }
-
-  // switch statement
+  */
+  // Switch statements are an alternative to traditional "if"/"else"
+  // statments.
+  // We can have blocks executed if we do not put a "break" after each
+  // case.
+  /*
   switch (a) {
     case 4:
       cout << a << " == 4 (within case 4)" << endl;
       break;
     case 6:
-      cout << a << " == 5 (within case 6)" << endl;
+      cout << a << " == 6 (within case 6)" << endl;
       break;
     default:
       cout << "a == " << a << " (within default)" << endl;
   }
-
+  */
   return 0;
 }
