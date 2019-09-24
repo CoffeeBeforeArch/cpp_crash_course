@@ -1,53 +1,54 @@
 // This program shows off arrays in the standard library
 // By: Nick from CoffeeBeforeArch
 
-#include <iostream>
 #include <array>
+#include <iostream>
+#include <vector>
 
+using std::array;
 using std::cout;
 using std::endl;
-using std::array;
+using std::vector;
 
 int main() {
-  // Declare integer array
-  int a[10];
+  // Having a unique variable for every integer would be crazy!
+  // In C++, we have arrays, which are fixed-size containers for
+  // elements of a designated type
+  // Here, we store 3 integers in an array called "array_of_ints"
+  array<int, 3> a_0;
 
-  // Initialize integer array
-  for (int i = 0; i < 10; i++) {
-    a[i] = i;
-  }
+  // Now let's initialize it!
+  // Here, we access the three integers in our array by indexing
+  a_0[0] = 10;
+  a_0[1] = 20;
+  a_0[2] = 30;
+  
+  // We can also initialize everything at once!
+  // This is called an initializer list
+  a_0 = {10, 20, 30};
 
-  // Print out array
-  for (int i = 0; i < 10; i++) {
-    cout << "Index " << i << ", value " << a[i] << ", address " << &a[i]
-         << endl;
-  }
-  cout << endl;
+  // We can also have uniform initialization at declaration time
+  // This is called uniform initialization
+  // Initializer lists also work here
+  array<int, 3> a_1 {10, 20, 30};
 
-  // Declare and initialize integer array at the same time
-  int b[] = {10, 11, 12};
-  for (int i = 0; i < 3; i++) {
-    cout << "Index " << i << ", value " << b[i] << endl;
-  }
-  cout << endl;
+  // What happens if we don't initialize everything?
+  // The remainder gets zero-initialized (e.g. a_2[1] and a_2[2] are 0)
+  array<int, 3> a_2 {10};
+  cout << "a_2 = " << a_2[0] << " " << a_2[1] << " " << a_2[2] << endl;
 
-  // Pointer arithmetic
-  int *ptr = b;
-  cout << "b[0] = *ptr = " << *ptr << endl;
-  ptr++;
-  cout << "b[1] = *(++ptr) = " << *ptr << endl;
-  cout << endl;
-
-  // These letters can be changed!
-  char hw_array[] = {'H', 'e', 'l', 'l', 'o', ' ',
-                     'W', 'o', 'r', 'l', 'd', '!'};
-
-  // These are in read-only memory (letters are fixed!)
-  const char *hw_string = "Hello World!";
-
-  // Print out both Hello World strings
-  cout << hw_array << endl;
-  cout << hw_string << endl;
+  // Arrays are also nice because they do more than just store data!
+  // We can get the number of elements
+  cout << "a_2 size = " << a_2.size() << endl;
+  // The first element
+  cout << "First element of a_2 = " << a_2.front() << endl;
+  // The last element
+  cout << "Last element of a_2 = " << a_2.back() << endl;
+  // We can fill the array with the same element
+  // Array now contains all 10s
+  a_2.fill(10);
+  cout << "a_2 = " << a_2[0] << " " << a_2[1] << " " << a_2[2] << endl;
+  
 
   return 0;
 }
