@@ -49,6 +49,13 @@ int main() {
   a_2.fill(10);
   cout << "a_2 = " << a_2[0] << " " << a_2[1] << " " << a_2[2] << endl;
   
+  // As a brief aside, we can look at C-style arrays, which are just
+  // consecutive pieces of storage (no methods)
+  // These are generally discouraged because the performance is
+  // typically the exact same as std::array, and are easier to make
+  // mistakes with
+  int c_a[3] = {1, 2, 3};
+  cout << "c_a = " << c_a[0] << " " << c_a[1] << " " << c_a[2] << endl;
 
   return 0;
 }
