@@ -44,14 +44,20 @@ int main() {
   cout << "Vector capacity: " << v1.capacity() << endl;
 
   // But we don't have to rely on exponential allocation, we can just
-  // also just specify how much space we want;
+  // also just specify how much space we want. (This will not change the size of
+  // the vector)
   v1.reserve(100);
+  cout << "Vector size: " << v1.size() << endl;
+  cout << "Vector capacity: " << v1.capacity() << endl;
+
+  // If we've allocated more than we need, we can shrink the container
+  v1.shrink_to_fit();
   cout << "Vector size: " << v1.size() << endl;
   cout << "Vector capacity: " << v1.capacity() << endl;
 
   // We can access vectors just like arrays (indexing)
   cout << "v1[0] = " << v1[0] << ", v1[1] = " << v1[1] << ", v1[2] = " << v1[2]
        << endl;
-  
+
   return 0;
 }
