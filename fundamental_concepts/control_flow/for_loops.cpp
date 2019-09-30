@@ -4,12 +4,10 @@
 
 #include <array>
 #include <iostream>
-#include <vector>
 
 using std::array;
 using std::cout;
 using std::endl;
-using std::vector;
 
 int main() {
   // Declare and initialize an array
@@ -30,7 +28,7 @@ int main() {
 
   // We can also use iterators
   // Iterators are a special type of object that can be used to access STL
-  // containers We can iterate through them, and dereference them to access
+  // containers. We can iterate through them, and dereference them to access
   // their values. Safe and intuitive (we don't have to reason about and index,
   // just "begin" and "end"!).
   cout << "Iterators" << endl;
