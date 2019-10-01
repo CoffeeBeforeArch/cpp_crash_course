@@ -55,9 +55,53 @@ int main() {
   cout << "Vector size: " << v1.size() << endl;
   cout << "Vector capacity: " << v1.capacity() << endl;
 
+  // We can also resize the container, which can change both the size and
+  // capacity
+  v1.resize(10, 5);
+  cout << "Vector size: " << v1.size() << endl;
+  cout << "Vector capacity: " << v1.capacity() << endl;
+
+  // We can use iterators, reverse iterators, and range-based for loops (just
+  // like arrays)!
+  for (auto i : v1) {
+    cout << i << " ";
+  }
+  cout << endl;
+
+  // If we re-size with a smaller value, we chop off part of our vector
+  v1.resize(5);
+  cout << "Vector size: " << v1.size() << endl;
+  cout << "Vector capacity: " << v1.capacity() << endl;
+  for (auto i : v1) {
+    cout << i << " ";
+  }
+  cout << endl;
+  
+  // We can use pop_back to get rid of the last element
+  v1.pop_back();
+  cout << "Vector size: " << v1.size() << endl;
+  cout << "Vector capacity: " << v1.capacity() << endl;
+  for (auto i : v1) {
+    cout << i << " ";
+  }
+  cout << endl;
+
+  // We can also get rid of a particular element using erase and iterators
+  v1.erase(begin(v1));
+  cout << "Vector size: " << v1.size() << endl;
+  cout << "Vector capacity: " << v1.capacity() << endl;
+  for (auto i : v1) {
+    cout << i << " ";
+  }
+  cout << endl;
+
   // We can access vectors just like arrays (indexing)
   cout << "v1[0] = " << v1[0] << ", v1[1] = " << v1[1] << ", v1[2] = " << v1[2]
        << endl;
+
+  // We can also access using the "at"
+  cout << "v1.at(0) = " << v1.at(0) << ", v1.at(1) = " << v1.at(1)
+       << ", v1.at(2) = " << v1.at(2) << endl;
 
   return 0;
 }
