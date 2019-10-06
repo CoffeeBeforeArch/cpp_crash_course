@@ -6,6 +6,12 @@
 
 using namespace std;
 
+// Overload new operator to track heap allocations
+void* operator new(size_t n) {
+  cout << "Allocating " << n << " bytes" << endl;
+  return malloc(n);
+}
+
 // "x" is only valid in the scope of this function!
 // Returning a pointer would give us a pointer to something
 // that is no longer guaranteed to us!
