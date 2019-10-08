@@ -39,9 +39,9 @@ int main() {
   dp = print_and_inc_double(dp);
 
   // Print out the returned values
-  cout << "New Int value " << i << endl;
-  cout << "New Float value " << sp << endl;
-  cout << "New Double value " << dp << endl;
+  cout << "New int value " << i << endl;
+  cout << "New float value " << sp << endl;
+  cout << "New double value " << dp << endl;
 
   return 0;
 }
