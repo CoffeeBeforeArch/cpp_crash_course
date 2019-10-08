@@ -8,6 +8,9 @@ using namespace std;
 // Calculate factorial (assume positive number)
 // e.g. 5! = 5 * 4 * 3 * 2 * 1 = 120
 int factorial(int n) {
+  // Nice way to print the function signature and value
+  cout << __PRETTY_FUNCTION__ << ", " << n << endl;
+
   // Base case
   if (n <= 1) {
     return 1;
@@ -20,6 +23,9 @@ int factorial(int n) {
 // Print the nth digit the fibonacci sequence (assume positive number)
 // e.g. for n = 5, fibonacci(5) = (n-2 + n-1) = 2 + 3 = 5
 int fibonacci(int n) {
+  // Nice way to print the function signature and value
+  cout << __PRETTY_FUNCTION__ << ", " << n << endl;
+  
   // Base case
   if (n <= 1) {
     return n;
@@ -33,16 +39,17 @@ int main() {
   // Initialize and delcare number of iterations
   int n_factorial = 5;
   int result_factorial;
-  int n_fibonacci = 5;
-  int result_fibonacci;
+  //int n_fibonacci = 5;
+  //int result_fibonacci;
 
   // Call factorial and fibonacci functions
   result_factorial = factorial(n_factorial);
-  result_fibonacci = fibonacci(n_fibonacci);
+  //result_fibonacci = fibonacci(n_fibonacci);
 
   // Print results
   cout << n_factorial << "! = " << result_factorial << endl;
-  cout << "The nth digit of fibonacci is " << result_fibonacci << endl;
+  //cout << "The " << n_fibonacci << "th digit of fibonacci is "
+  //     << result_fibonacci << endl;
 
   return 0;
 }
