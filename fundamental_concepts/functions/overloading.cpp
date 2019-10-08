@@ -1,35 +1,46 @@
-// This program shows off overloaded functions in C++ to print
-// the size of different data types.
+// This program shows off overloaded functions in C++
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
-// Prints the size of a character
-void print(char c) { cout << "char size is " << sizeof(c) << endl; }
+// Prints the value of an integer and it's size, and increments the value
+int print_and_inc(int i) {
+  cout << "Value: " << i << ", S: " << sizeof(i) << endl;
+  return i + 1;
+}
 
-// Prints the size of an integer
-void print(int i) { cout << "int size is " << sizeof(i) << endl; }
+// Prints the value of a float and it's size, and increments the value
+float print_and_inc(float sp) {
+  cout << "Value: " << sp << ", S: " << sizeof(sp) << endl;
+  return sp + 1;
+}
 
-// Prints the size of a single precision floating point number
-void print(float f) { cout << "float size is " << sizeof(f) << endl; }
-
-// Prints the size of a double precision floating point number
-void print(double d) { cout << "double size is " << sizeof(d) << endl; }
+// Prints the value of a double and it's size, and increments the value
+double print_and_inc(double dp) {
+  cout << "Value: " << dp << ", S: " << sizeof(dp) << endl;
+  return dp + 1;
+}
 
 int main() {
   // Declare and initialize variables
-  char character = 23;
-  int integer = 4362;
-  float single_precision = 20.123;
-  double double_precision = 194.421;
+  int i = 4362;
+  float sp = 20.123;
+  double dp = 194.421;
 
-  // Call functions with same name but different signatures
-  print(character);
-  print(integer);
-  print(single_precision);
-  print(double_precision);
+  // Call our overloaded functions
+  // Functions can be the same name as long as the signatures are different (the
+  // compiler can still tell them apart).
+  i = print_and_inc(i);
+  sp = print_and_inc(sp);
+  dp = print_and_inc(dp);
+
+  // Print out the returned values
+  cout << "New int value " << i << endl;
+  cout << "New float value " << sp << endl;
+  cout << "New double value " << dp << endl;
 
   return 0;
 }
