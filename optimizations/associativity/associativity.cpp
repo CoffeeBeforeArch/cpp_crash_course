@@ -2,7 +2,12 @@
 // By: Nick from CoffeeBeforeArch
 
 #include <benchmark/benchmark.h>
+#include <algorithm>
+#include <array>
 #include <cstdlib>
+
+using std::array;
+using std::generate;
 
 // Benchmark for showing cache associativity
 static void assocBench(benchmark::State &s) {
@@ -10,13 +15,11 @@ static void assocBench(benchmark::State &s) {
   int step = 1 << s.range(0);
 
   // Size of the array is constant (32MB)
-  int N = 1 << 25;
-  char *a = new char[N];
+  const int N = 1 << 25;
+  array<int, N> a;
 
   // Initialize the array with some random numbers
-  for (int i = 0; i < N; i++) {
-    a[i] = rand() % 100;
-  }
+  generate(begin(a), end(a), []() { return rand() % 100; });
 
   // Profile the runtime of different step sizes
   while (s.KeepRunning()) {
@@ -29,9 +32,6 @@ static void assocBench(benchmark::State &s) {
       i = (i + step) % N;
     }
   }
-
-  // Free the memory
-  delete[] a;
 }
 // Register the benchmark
 BENCHMARK(assocBench)->DenseRange(0, 16)->Unit(benchmark::kMicrosecond);
