@@ -21,35 +21,29 @@ int factorial(int n) {
 }
 
 // Print the nth digit the fibonacci sequence (assume positive number)
-// e.g. for n = 5, fibonacci(5) = (n-2 + n-1) = 2 + 3 = 5
+// e.g. for n = 5, fibonacci(5) = (n-1 + n-2) = 3 + 2 = 5
 int fibonacci(int n) {
   // Nice way to print the function signature and value
   cout << __PRETTY_FUNCTION__ << ", " << n << endl;
-  
+
   // Base case
   if (n <= 1) {
     return n;
   }
 
   // Keey calling the function recursively
-  return (fibonacci(n - 2) + fibonacci(n - 1));
+  return (fibonacci(n - 1) + fibonacci(n - 2));
 }
 
 int main() {
   // Initialize and delcare number of iterations
-  int n_factorial = 5;
-  int result_factorial;
-  //int n_fibonacci = 5;
-  //int result_fibonacci;
-
-  // Call factorial and fibonacci functions
-  result_factorial = factorial(n_factorial);
-  //result_fibonacci = fibonacci(n_fibonacci);
+  const int N = 5;
+  const int r_fac = factorial(N);
+  const int r_fib = fibonacci(N);
 
   // Print results
-  cout << n_factorial << "! = " << result_factorial << endl;
-  //cout << "The " << n_fibonacci << "th digit of fibonacci is "
-  //     << result_fibonacci << endl;
+  cout << N << "! = " << r_fac << endl;
+  cout << "The " << N << "th fibonacci number is " << r_fib << endl;
 
   return 0;
 }
