@@ -3,40 +3,43 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
-// Calculate factorial (assume positive number)
+// Calculates the factorial of a given integer
 // e.g. 5! = 5 * 4 * 3 * 2 * 1 = 120
-int factorial(int n) {
+int factorial(int N) {
   // Nice way to print the function signature and value
-  cout << __PRETTY_FUNCTION__ << ", " << n << endl;
+  cout << __PRETTY_FUNCTION__ << ", " << N << endl;
 
-  // Base case
-  if (n <= 1) {
+  // Base case (stop recursion)
+  if (N <= 1) {
     return 1;
   }
 
   // Keep calling the function recursively
-  return (n * factorial(n - 1));
+  // Based on the idea that 5! = 5 * 4!
+  return (N * factorial(N - 1));
 }
 
 // Print the nth digit the fibonacci sequence (assume positive number)
 // e.g. for n = 5, fibonacci(5) = (n-1 + n-2) = 3 + 2 = 5
-int fibonacci(int n) {
+int fibonacci(int N) {
   // Nice way to print the function signature and value
-  cout << __PRETTY_FUNCTION__ << ", " << n << endl;
+  cout << __PRETTY_FUNCTION__ << ", " << N << endl;
 
   // Base case
-  if (n <= 1) {
-    return n;
+  if (N <= 1) {
+    return N;
   }
 
   // Keey calling the function recursively
-  return (fibonacci(n - 1) + fibonacci(n - 2));
+  // Based on the idea that fib(i) = fib(i - 1) + fib(i - 2)
+  return (fibonacci(N - 1) + fibonacci(N - 2));
 }
 
 int main() {
-  // Initialize and delcare number of iterations
+  // Run factorial and fibonacci for N = 5
   const int N = 5;
   const int r_fac = factorial(N);
   const int r_fib = fibonacci(N);
