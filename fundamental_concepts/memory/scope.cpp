@@ -4,13 +4,9 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-// Overload new operator to track heap allocations
-void* operator new(size_t n) {
-  cout << "Allocating " << n << " bytes" << endl;
-  return malloc(n);
-}
+using std::cout;
+using std::endl;
+using std::vector;
 
 // "x" is only valid in the scope of this function!
 // Returning a pointer would give us a pointer to something
@@ -39,10 +35,10 @@ int main() {
   // After this point, the memory used to store "x" can be (almost)
   // any value
 
-  // Incorrect way to generate a pointer to a number
+  // Incorrect way to generate a pointer to something
   int *p1 = getPtrBad();
 
-  // Correct way to generate a pointer to a number
+  // Correct way to generate a pointer to something
   int *p2 = getPtrGood();
 
   // Print both pointers
@@ -55,23 +51,20 @@ int main() {
   delete p2;
 
   // Use a vector to store all the pointers
-  vector<int *> old_pointers;
+  vector<int *> pointers(5);
 
   // Let's look at an example of why we should free memory
   // Overwrite a pointer 5 times, and then de-allocate the last using delete
   // Problem? The first 4 still are allocated!
-  for (int i = 0; i < 5; i++) {
-    p2 = getPtrGood();
-    old_pointers.push_back(p2);
+  for (auto &i : pointers) {
+    i = getPtrGood();
   }
-  delete p2;
 
   // Print all the pointers that are still valid
   // Printing the deleted one is undefined behavior (could lead to a
   // segmentation fault, so do size() - 1)
-  for (int i = 0; i < old_pointers.size() - 1; i++) {
-    cout << "Address: " << old_pointers[i] << " Value: " << *old_pointers[i]
-         << endl;
+  for (auto i : pointers) {
+    cout << "Address: " << i << " Value: " << *i << endl;
   }
 
   // New can be used on any data type. This includes classes and
