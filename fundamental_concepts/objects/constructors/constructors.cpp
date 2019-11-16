@@ -52,7 +52,7 @@ int main() {
   // Likely does not print what we are expecting (garbage values)
   w2.print();
   
-  // We can also value initialize will set all the members of our class to 0
+  // Creating here we are zero-initialing a class, and assigning it to w3
   Wallet w3 = Wallet();
   //Wallet w3 = {};
   w3.print();
