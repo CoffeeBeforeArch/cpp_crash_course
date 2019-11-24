@@ -18,4 +18,16 @@ C++ Compiler: g++ (9.1)
 ## Concepts covered in C++ Crash Course
 # Basics
 | Video | Concepts | Files |
-| ----- | -------- | ----- | 
+| ----- | -------- | ----- |
+
+# Functions
+| Video | Concepts | Files |
+| ----- | -------- | ----- |
+
+# Containers
+| Video | Concepts | Files |
+| ----- | -------- | ----- |
+
+# Objects
+| Video | Concepts | Files |
+| ----- | -------- | ----- |
