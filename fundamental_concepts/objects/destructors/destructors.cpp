@@ -1,68 +1,58 @@
 // This program shows off the basics of constructors in C++
 // By: Nick from CoffeeBeforeArch
 
+#include <cassert>
 #include <iostream>
 
 using std::cout;
 using std::endl;
 
 // Our class from last example
-class Wallet {
+class Array {
  private:
-  int dollars;
-  int cents;
+  int *data;
+  int size;
 
  public:
   // Our constructor, and default constructor
-  Wallet(int d, int c);
-  Wallet() = default;
-  Wallet(const Wallet &w);
+  Array(int N);
+  Array() = delete;
 
   // Our destructor!
   // Specifies what happens when we destroy an object
-  ~Wallet();
+  ~Array();
 
-  void print();
-  void set_dollars(int d) { dollars = d; }
-  void set_cents(int c) { cents = c; }
-  int get_dollars() const { return dollars; }
-  int get_cents() const { return cents; }
+  // Get the size of our array
+  size_t get_size() { return size; }
+
+  // Get an element at a position
+  // Fails if the index is out of bounds
+  int at(int index) {
+    if (index < size) {
+      return data[index];
+    } else {
+      assert(0);
+    }
+  }
 };
 
-// Constructors have the same name as the class they belong to
-Wallet::Wallet(int d, int c) {
-  dollars = d;
-  cents = c;
-}
-
-// Copy constructs also have the name as the class they belong to, but they take
-// a another instance of the class as a parameter.
-Wallet::Wallet(const Wallet &w) {
-  cout << "Calling the copy constructor!" << endl;
-  dollars = w.get_dollars();
-  cents = w.get_cents();
+// Our constructor where we allocate memory
+Array::Array(int N) {
+  cout << "Allocating memory in constructor!\n";
+  data = new int[N];
+  size = N;
 }
 
 // Destructors have the name as the class they belong to, but use a tilde (~)
 // They get called when an object goes out of scope, or when they are manually
 // deleted
-Wallet::~Wallet() {
-  cout << "Calling the destructor" << endl;
-}
-
-// Our simple print method
-void Wallet::print() {
-  cout << "Value of wallet = $" << dollars << "." << cents << endl;
+Array::~Array() {
+  cout << "Freeing our allocated memory in destructor!\n";
+  delete[] data;
 }
 
 int main() {
-  // Let's create one object using our constructor
-  Wallet w1(10, 37);
-  w1.print();
-
-  // Create a new object using the copy constructor!
-  Wallet w2 = w1;
-  w2.print();
-
+  // Create an array with 10 elements
+  Array a1(10);
   return 0;
 }

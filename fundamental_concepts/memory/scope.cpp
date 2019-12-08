@@ -2,77 +2,56 @@
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
-#include <vector>
 
 using std::cout;
 using std::endl;
-using std::vector;
 
-// "x" is only valid in the scope of this function!
-// Returning a pointer would give us a pointer to something
-// that is no longer guaranteed to us!
-int *getPtrBad() {
-  // This is allocated on the stack (local variables)
-  int x = 5;
-  return &x;
+// This is illegal, because 'a' is on the stack, and goes out of scope
+// when the function returns
+int *bad_return() {
+  int a = 5;
+  cout << "Address of a: " << &a << endl;
+  return &a;
 }
 
-// The memory location of "x" will be valid until WE de-allocate it
-int *getPtrGood() {
-  // New allocates memory the size of an int in this case, and
-  // returns a pointer to that memory
-  // This is allocated on the heap (dynamic allocation)
-  int *x = new int;
-  *x = 5;
-  return x;
+// This is fine, because we are allocating space on the heap
+// Heap memory is valid until we free it!
+int *good_return() {
+  int *a = new int;
+  cout << "Address of a: " << a << endl;
+  *a = 5;
+  return a;
 }
 
 int main() {
-  // The variable "x" is only valid within the if statement
+  // When we talk about scope, we talk about where it is valid to access
+  // something
+  // For example, if we define a variable inside of an if statement, it is only
+  // valid inside the if statement!
   if (true) {
     int x = 5;
-  }
-  // After this point, the memory used to store "x" can be (almost)
-  // any value
-
-  // Incorrect way to generate a pointer to something
-  int *p1 = getPtrBad();
-
-  // Correct way to generate a pointer to something
-  int *p2 = getPtrGood();
-
-  // Print both pointers
-  // Printing the local one is undefined behavior (uncomment could
-  // lead to a segmentation fault!)
-  // cout << "Address: " << p1 << " Value: " << *p1 << endl;
-  cout << "Address: " << p2 << " Value: " << *p2 << endl;
-
-  // If we're done with heap allocated memory, get rid of it
-  delete p2;
-
-  // Use a vector to store all the pointers
-  vector<int *> pointers(5);
-
-  // Let's look at an example of why we should free memory
-  // Overwrite a pointer 5 times, and then de-allocate the last using delete
-  // Problem? The first 4 still are allocated!
-  for (auto &i : pointers) {
-    i = getPtrGood();
+    cout << "The value of x is: " << x << '\n';
   }
 
-  // Print all the pointers that are still valid
-  // Printing the deleted one is undefined behavior (could lead to a
-  // segmentation fault, so do size() - 1)
-  for (auto i : pointers) {
-    cout << "Address: " << i << " Value: " << *i << endl;
-  }
+  // This is illegal!
+  // cout << "The value of x is: " << x << '\n';
 
-  // New can be used on any data type. This includes classes and
-  // arrays. This array must manually be de-allocated.
-  int *array = new int[100];
+  // Here we fetch two pointers from two functions
+  // When we call a function we create a new stack frame.
+  // These are where our where local variables are allocated
+  // The stack frame is popped off the stack when a function returns
+  // That's why it's UB to access the bad pointer!
+  int *bad = bad_return();
+  int *good = good_return();
 
-  // De-allocation does not need to be one at a time...
-  delete[] array;
+  // Derefernce our pointers
+  // Reminder, dereferencing the bad pointer will likely cause a segfault
+  //cout << "Address of bad: " << bad << " Value: " << *bad << endl;
+  cout << "Address of good: " << good << " Value: " << *good << endl;
+
+  // One thing we have to make sure of is freeing our heap allocated memory
+  // As we just showed, it doesn't get freed automatically!
+  delete good;
 
   return 0;
 }
