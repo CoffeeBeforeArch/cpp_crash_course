@@ -4,13 +4,12 @@
 #include <iostream>
 
 using std::cout;
-using std::endl;
 
 // This is illegal, because 'a' is on the stack, and goes out of scope
 // when the function returns
 int *bad_return() {
   int a = 5;
-  cout << "Address of a: " << &a << endl;
+  cout << "Address of a: " << &a << '\n';
   return &a;
 }
 
@@ -18,7 +17,7 @@ int *bad_return() {
 // Heap memory is valid until we free it!
 int *good_return() {
   int *a = new int;
-  cout << "Address of a: " << a << endl;
+  cout << "Address of a: " << a << '\n';
   *a = 5;
   return a;
 }
@@ -46,8 +45,8 @@ int main() {
 
   // Derefernce our pointers
   // Reminder, dereferencing the bad pointer will likely cause a segfault
-  //cout << "Address of bad: " << bad << " Value: " << *bad << endl;
-  cout << "Address of good: " << good << " Value: " << *good << endl;
+  //cout << "Address of bad: " << bad << " Value: " << *bad << '\n';
+  cout << "Address of good: " << good << " Value: " << *good << '\n';
 
   // One thing we have to make sure of is freeing our heap allocated memory
   // As we just showed, it doesn't get freed automatically!
