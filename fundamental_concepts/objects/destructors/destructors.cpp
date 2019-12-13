@@ -14,16 +14,24 @@ class Array {
   int size;
 
  public:
-  // Our constructor, and default constructor
+  // Our constructor, default constructor, and and copy constructor
   Array(int N);
   Array() = delete;
+  Array(const Array &a) = default;
 
   // Our destructor!
   // Specifies what happens when we destroy an object
   ~Array();
 
   // Get the size of our array
-  size_t get_size() { return size; }
+  int get_size() { return size; }
+  int *get_data() { return data; }
+  // Set all the elements in our array
+  void set(const int val) {
+    for(int i = 0; i < size; i++) {
+      data[i] = val;
+    }
+  }
 
   // Get an element at a position
   // Fails if the index is out of bounds
@@ -38,8 +46,9 @@ class Array {
 
 // Our constructor where we allocate memory
 Array::Array(int N) {
+  // Memory is also value initialized
   cout << "Allocating memory in constructor!\n";
-  data = new int[N];
+  data = new int[N]();
   size = N;
 }
 
@@ -54,5 +63,14 @@ Array::~Array() {
 int main() {
   // Create an array with 10 elements
   Array a1(10);
+  a1.set(5);
+
+  // Use the copy constructor
+  Array a2 = a1;
+
+  // We just copied the pointer!
+  // This is known as a shallow copy, and can be dangerous if we de-allocate
+  cout << "a1's pointer: " << a1.get_data() << " a2's pointer: " << a2.get_data() << '\n';
+
   return 0;
 }
