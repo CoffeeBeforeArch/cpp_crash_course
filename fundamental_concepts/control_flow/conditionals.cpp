@@ -19,7 +19,6 @@ int main() {
 
   // We can do multiple checks using chained "if"/"else" statements
   // Only 1 of these conditions is every executed
-  /*
   if (a > 5) {
     cout << "a > 5 (within if)" << endl;
   } else if (b == 10) {
@@ -27,12 +26,11 @@ int main() {
   } else {
     cout << "Any other case!" << endl;
   }
-  */
+  
   // Switch statements are an alternative to traditional "if"/"else"
   // statments.
   // We can have blocks executed if we do not put a "break" after each
   // case.
-  /*
   switch (a) {
     case 4:
       cout << a << " == 4 (within case 4)" << endl;
@@ -43,6 +41,6 @@ int main() {
     default:
       cout << "a == " << a << " (within default)" << endl;
   }
-  */
+  
   return 0;
 }
