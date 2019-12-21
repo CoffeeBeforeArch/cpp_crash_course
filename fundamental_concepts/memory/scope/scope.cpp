@@ -22,7 +22,7 @@ int main() {
   int x = 10;
   cout << "The value of x in the main function scope is: " << x << '\n';
   
-  // However, we can have nested namespaces 
+  // However, we can have nested scopes 
   if (true) {
     // This is a new integer x that can be accessed only in the if statement
     int x = 5;
