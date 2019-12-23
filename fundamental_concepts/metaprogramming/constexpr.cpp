@@ -4,7 +4,6 @@
 #include <iostream>
 
 using std::cout;
-using std::endl;
 
 // Constexpr fibonacci function
 constexpr int fibonacci(int N) {
@@ -21,5 +20,5 @@ int main() {
   const int result = fibonacci(N);
 
   // Print the result
-  cout << "The " << N << "th fibonacci number is " << result << endl;
+  cout << "The " << N << "th fibonacci number is " << result << '\n';
 }
