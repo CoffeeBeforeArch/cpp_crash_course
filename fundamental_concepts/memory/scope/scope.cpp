@@ -1,56 +1,39 @@
-// This program covers the fundamentals of scoping and memory in C++
+// This program covers the fundamentals of scope in C++
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
 
 using std::cout;
 
-// This is illegal, because 'a' is on the stack, and goes out of scope
-// when the function returns
-int *bad_return() {
-  int a = 5;
-  cout << "Address of a: " << &a << '\n';
-  return &a;
-}
+// Integer at global scope
+// This can be accessed anywhere!
+int x = 15;
 
-// This is fine, because we are allocating space on the heap
-// Heap memory is valid until we free it!
-int *good_return() {
-  int *a = new int;
-  cout << "Address of a: " << a << '\n';
-  *a = 5;
-  return a;
+void printX() {
+  // This variable x is valid for this function call only
+  int x = 0;
+  cout << "The value of x in the scope of the function: " << x << '\n';
 }
 
 int main() {
   // When we talk about scope, we talk about where it is valid to access
   // something
-  // For example, if we define a variable inside of an if statement, it is only
-  // valid inside the if statement!
+  // This variable x is valid for the rest of the main function
+  int x = 10;
+  cout << "The value of x in the main function scope is: " << x << '\n';
+  
+  // However, we can have nested scopes 
   if (true) {
+    // This is a new integer x that can be accessed only in the if statement
     int x = 5;
-    cout << "The value of x is: " << x << '\n';
+    cout << "The value of x in the nested scope is: " << x << '\n';
   }
 
-  // This is illegal!
-  // cout << "The value of x is: " << x << '\n';
+  // Call our function that also has an integer x
+  printX();
 
-  // Here we fetch two pointers from two functions
-  // When we call a function we create a new stack frame.
-  // These are where our where local variables are allocated
-  // The stack frame is popped off the stack when a function returns
-  // That's why it's UB to access the bad pointer!
-  int *bad = bad_return();
-  int *good = good_return();
-
-  // Derefernce our pointers
-  // Reminder, dereferencing the bad pointer will likely cause a segfault
-  //cout << "Address of bad: " << bad << " Value: " << *bad << '\n';
-  cout << "Address of good: " << good << " Value: " << *good << '\n';
-
-  // One thing we have to make sure of is freeing our heap allocated memory
-  // As we just showed, it doesn't get freed automatically!
-  delete good;
-
+  // We can access the global variable using the scope resolution operator
+  cout << "The value of x from the global scope: " << ::x << '\n';
+  
   return 0;
 }
