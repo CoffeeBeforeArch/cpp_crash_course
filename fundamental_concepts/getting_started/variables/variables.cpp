@@ -5,7 +5,6 @@
 #include <iostream>
 
 using std::cout;
-using std::endl;
 
 int main() {
   // Declare variables
@@ -24,8 +23,8 @@ int main() {
   sum = a + b;
 
   // Print string and sum
-  cout << "Integer: " << i << endl;
-  cout << "The sum of " << a << " and " << b << " is " << sum << endl;
+  cout << "Integer: " << i << '\n';
+  cout << "The sum of " << a << " and " << b << " is " << sum << '\n';
 
   return 0;
 }

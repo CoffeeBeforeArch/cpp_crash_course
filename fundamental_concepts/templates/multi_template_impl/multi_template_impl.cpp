@@ -7,7 +7,7 @@
 
 #include "interface.h"
 
-using namespace std;
+using std::cout;
 
 int main() {
   // Make an integer container using the standard template
@@ -17,11 +17,11 @@ int main() {
   Container<char> char_container('a');
 
   // Call method from standard template
-  cout << "Increment from original template " << int_container.inc() << endl;
+  cout << "Increment from original template " << int_container.inc() << '\n';
 
   // Call method from special implementation
   cout << "Uppercase from original template " << char_container.uppercase()
-       << endl;
+       << '\n';
 
   return 0;
 }

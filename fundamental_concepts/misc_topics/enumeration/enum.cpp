@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
 
 // Enums allow us to give more meaning to integers
 // Similar to a new data-type, but it's just a subset of integers
@@ -23,8 +23,8 @@ int main() {
   suit_t card2 = SPADES;
 
   // Print out the string from our function, and the actual value
-  cout << "card1 is a " << print_suit(card1) << " with value " << card1 << endl;
-  cout << "card2 is a " << print_suit(card2) << " with value " << card2 << endl;
+  cout << "card1 is a " << print_suit(card1) << " with value " << card1 << '\n';
+  cout << "card2 is a " << print_suit(card2) << " with value " << card2 << '\n';
 
   return 0;
 }

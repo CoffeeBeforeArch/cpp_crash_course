@@ -4,12 +4,13 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+using std::cout;
+using std::string;
 
 // This is the base case for our recursive function
 template <typename T>
 T adder(T v) {
-  // cout << __PRETTY_FUNCTION__ << endl;
+  // cout << __PRETTY_FUNCTION__ << '\n';
   return v;
 }
 
@@ -19,18 +20,18 @@ T adder(T v) {
 // We can use recursive calls to unpack all the arguments!
 template <typename T, typename... Args>
 T adder(T first, Args... args) {
-  // cout << __PRETTY_FUNCTION__ << endl;
+  // cout << __PRETTY_FUNCTION__ << '\n';
   return first + adder(args...);
 }
 
 int main() {
   // We can calculate a sum with a variable number of integers
   int int_sum = adder(1, 2, 3, 4, 5);
-  cout << "The integer sum is " << int_sum << endl;
+  cout << "The integer sum is " << int_sum << '\n';
 
   // We can calculate a sum with a  variable number of floats
   float float_sum = adder(1.5, 2.5, 3.5, 4.5, 5.5);
-  cout << "The floating point sum is " << float_sum << endl;
+  cout << "The floating point sum is " << float_sum << '\n';
 
   // Declare some strings we want to combine
   string partial_1 = "This ";
@@ -39,7 +40,7 @@ int main() {
 
   // We can concatenate a varaible number of strings
   string concatenate = adder(partial_1, partial_2, partial_3);
-  cout << concatenate << endl;
+  cout << concatenate << '\n';
 
   return 0;
 }

@@ -6,7 +6,6 @@
 #include <cstdlib>
 
 using std::cout;
-using std::endl;
 
 // Our class from last example
 class Wallet {
@@ -36,13 +35,13 @@ Wallet::Wallet(int d, int c) {
 
 // Copy constructor
 Wallet::Wallet(const Wallet &w){
-  cout << "Calling the copy constructor!" << endl;
+  cout << "Calling the copy constructor!" << '\n';
   dollars = w.get_dollars();
   cents = w.get_cents();
 }
 
 void Wallet::print() {
-  cout << "Value of wallet = $" << dollars << "." << cents << endl;
+  cout << "Value of wallet = $" << dollars << "." << cents << '\n';
 }
 
 // Assigns a random number from 0-99 to the dollars and cents fields
@@ -52,7 +51,7 @@ void randomWallet_pbv(Wallet w){
   // It's no longer valid when the function returns!
   w.set_dollars(rand() % 100);
   w.set_cents(rand() % 100);
-  cout << "Print from PBV function" << endl;
+  cout << "Print from PBV function" << '\n';
   w.print();
 }
 
@@ -63,7 +62,7 @@ void randomWallet_pbr(Wallet &w){
   // There is not copy constructor because we are modifying the original object
   w.set_dollars(rand() % 100);
   w.set_cents(rand() % 100);
-  cout << "Print from PBR function" << endl;
+  cout << "Print from PBR function" << '\n';
   w.print();
 }
 
@@ -77,7 +76,7 @@ int main() {
   randomWallet_pbv(w1);
   
   // Print out the values in main
-  cout << "Print from main" << endl;
+  cout << "Print from main" << '\n';
   w1.print();
 
   // When we pass a wallet by reference, we are not making a temporary!
@@ -85,7 +84,7 @@ int main() {
   randomWallet_pbr(w1);
 
   // Print out the values in main
-  cout << "Print from main" << endl;
+  cout << "Print from main" << '\n';
   w1.print();
 
   return 0;

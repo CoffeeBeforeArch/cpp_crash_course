@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
 
 int main() {
   // Declare and initialize variables
@@ -17,7 +17,7 @@ int main() {
     product += multiplicand;
     multiplier--;
   }
-  cout << "Multiplier = " << multiplier << ", product = " << product << endl;
+  cout << "Multiplier = " << multiplier << ", product = " << product << '\n';
 
   // Reset product, leave multiplier still at 0
   product = 0;
@@ -25,7 +25,7 @@ int main() {
     product += multiplicand;
     multiplier--;
   } while (multiplier > 0);
-  cout << "Multiplier = " << multiplier << ", product = " << product << endl;
+  cout << "Multiplier = " << multiplier << ", product = " << product << '\n';
 
   return 0;
 }

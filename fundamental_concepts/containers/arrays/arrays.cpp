@@ -7,7 +7,6 @@
 
 using std::array;
 using std::cout;
-using std::endl;
 using std::vector;
 
 int main() {
@@ -35,19 +34,19 @@ int main() {
   // What happens if we don't initialize everything?
   // The remainder gets zero-initialized (e.g. a_2[1] and a_2[2] are 0)
   array<int, 3> a_2 {10};
-  cout << "a_2 = " << a_2[0] << " " << a_2[1] << " " << a_2[2] << endl;
+  cout << "a_2 = " << a_2[0] << " " << a_2[1] << " " << a_2[2] << '\n';
 
   // Arrays are also nice because they do more than just store data!
   // We can get the number of elements
-  cout << "a_2 size = " << a_2.size() << endl;
+  cout << "a_2 size = " << a_2.size() << '\n';
   // The first element
-  cout << "First element of a_2 = " << a_2.front() << endl;
+  cout << "First element of a_2 = " << a_2.front() << '\n';
   // The last element
-  cout << "Last element of a_2 = " << a_2.back() << endl;
+  cout << "Last element of a_2 = " << a_2.back() << '\n';
   // We can fill the array with the same element
   // Array now contains all 10s
   a_2.fill(10);
-  cout << "a_2 = " << a_2[0] << " " << a_2[1] << " " << a_2[2] << endl;
+  cout << "a_2 = " << a_2[0] << " " << a_2[1] << " " << a_2[2] << '\n';
   
   // As a brief aside, we can look at C-style arrays, which are just
   // consecutive pieces of storage (no methods)
@@ -55,7 +54,7 @@ int main() {
   // typically the exact same as std::array, and are easier to make
   // mistakes with
   int c_a[3] = {1, 2, 3};
-  cout << "c_a = " << c_a[0] << " " << c_a[1] << " " << c_a[2] << endl;
+  cout << "c_a = " << c_a[0] << " " << c_a[1] << " " << c_a[2] << '\n';
 
   return 0;
 }

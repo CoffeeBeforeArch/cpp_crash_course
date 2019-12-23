@@ -4,7 +4,6 @@
 #include <iostream>
 
 using std::cout;
-using std::endl;
 
 // Classes are user-defined data types!
 // They act as blueprints to create objects
@@ -35,7 +34,7 @@ class Wallet {
 // Methods are often implemented outside the class (and in different files)
 // We do this to avoid redefinition errors when we are including files
 void Wallet::print() {
-  cout << "Value of wallet = $" << dollars << "." << cents << endl;
+  cout << "Value of wallet = $" << dollars << "." << cents << '\n';
 }
 
 int main() {

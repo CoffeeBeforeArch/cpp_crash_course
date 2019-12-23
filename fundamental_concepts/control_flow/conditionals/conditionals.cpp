@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
 
 int main() {
   // Declare and initialize variables
@@ -14,33 +14,33 @@ int main() {
   // For "if" statements, the encompassed code is only executed if the
   // condition is True.
   if (a == 5) {
-    cout << "Inside if statement (a == " << a << ")" << endl;
+    cout << "Inside if statement (a == " << a << ")\n";
   }
 
   // We can do multiple checks using chained "if"/"else" statements
   // Only 1 of these conditions is every executed
   if (a > 5) {
-    cout << "a > 5 (within if)" << endl;
+    cout << "a > 5 (within if)\n";
   } else if (b == 10) {
-    cout << "b == 10 (within else if)" << endl;
+    cout << "b == 10 (within else if)\n";
   } else {
-    cout << "Any other case!" << endl;
+    cout << "Any other case!\n";
   }
-  
+
   // Switch statements are an alternative to traditional "if"/"else"
   // statments.
   // We can have blocks executed if we do not put a "break" after each
   // case.
   switch (a) {
     case 4:
-      cout << a << " == 4 (within case 4)" << endl;
+      cout << a << " == 4 (within case 4)\n";
       break;
     case 6:
-      cout << a << " == 6 (within case 6)" << endl;
+      cout << a << " == 6 (within case 6)\n";
       break;
     default:
-      cout << "a == " << a << " (within default)" << endl;
+      cout << "a == " << a << " (within default)\n";
   }
-  
+
   return 0;
 }

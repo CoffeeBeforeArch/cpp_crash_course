@@ -4,7 +4,10 @@
 #include <iostream>
 #include <stdexcept>
 
-using namespace std;
+using std::cout;
+using std::cerr;
+using std::runtime_error;
+using std::bad_alloc;
 
 int divide(const int x, const int y) {
   if (y == 0) {
@@ -20,7 +23,7 @@ void allocate(int x, int **arrPtr) {
   try {
     arrPtr = new int *[divide(5, x)];
   } catch (runtime_error &error) {
-    cerr << "Caught division error: " << error.what() << endl;
+    cerr << "Caught division error: " << error.what() << '\n';
   }
 }
 
@@ -33,10 +36,10 @@ int main() {
   try {
     allocate(a, array);
   } catch (bad_alloc &error) {
-    cerr << "Failed to allocate memory using new" << endl;
+    cerr << "Failed to allocate memory using new" << '\n';
   }
 
   // Program still continues
-  cout << "Still executes code following an exception" << endl;
+  cout << "Still executes code following an exception" << '\n';
   return 0;
 }

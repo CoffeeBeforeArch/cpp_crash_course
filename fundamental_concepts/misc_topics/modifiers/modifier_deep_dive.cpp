@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
 
 // This function shows off how a static variable is persistant
 // between function calls
@@ -13,7 +13,7 @@ void static_count() {
   static int count = 0;
 
   // Print the current value of count
-  cout << "Count = " << count << endl;
+  cout << "Count = " << count << '\n';
 
   // Increment the static variable
   count++;
@@ -37,7 +37,7 @@ class flagClass {
   bool get_flag() const {
     // Even though this is constant we can modify access
     accesses++;
-    cout << "Accesses incremented to " << accesses << endl;
+    cout << "Accesses incremented to " << accesses << '\n';
     return flag;
   }
 };
@@ -57,7 +57,7 @@ int main() {
   bool flag;
   for (int i = 0; i < 5; i++) {
     flag = fc.get_flag();
-    cout << "Flag: " << flag << endl;
+    cout << "Flag: " << flag << '\n';
   }
 
   // Create two new integers
@@ -77,8 +77,8 @@ int main() {
 
   // Print out the results (These will always be the same in a
   // single-threaded program)
-  cout << "Non-Volatile = " << non_volatile_int << endl;
-  cout << "Volatile = " << volatile_int << endl;
+  cout << "Non-Volatile = " << non_volatile_int << '\n';
+  cout << "Volatile = " << volatile_int << '\n';
 
   return 0;
 }

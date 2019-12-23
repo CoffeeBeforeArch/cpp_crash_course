@@ -3,7 +3,7 @@
 
 #include "interface.h"
 
-using namespace std;
+using std::cout;
 
 int main() {
   // Create three objects. One car, and one truck, and one generic
@@ -16,11 +16,11 @@ int main() {
 
   // This calls the appropriate version of getDescription()
   // Similar to function overloading
-  cout << car1.getDescription() << endl;
-  cout << truck1.getDescription() << endl;
+  cout << car1.getDescription() << '\n';
+  cout << truck1.getDescription() << '\n';
 
   // Only valid if Vehicle is not an abstract class
-  cout << v1.getDescription() << endl;
+  cout << v1.getDescription() << '\n';
 
   // Both of these objects are derived from vehicles, so we can
   // represent them as their parent class.
@@ -28,8 +28,8 @@ int main() {
   Vehicle *v3 = &truck1;
 
   // This will still call the child class method of getDescription()
-  cout << v2->getDescription() << endl;
-  cout << v3->getDescription() << endl;
+  cout << v2->getDescription() << '\n';
+  cout << v3->getDescription() << '\n';
 
   return 0;
 }

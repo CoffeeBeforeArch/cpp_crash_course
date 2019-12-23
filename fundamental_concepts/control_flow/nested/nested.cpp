@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
 
 int main() {
   // Declare and initialize variables
@@ -12,19 +12,19 @@ int main() {
   int product = 0;
 
   // Compute 5 * 10 using addition
-  cout << "Before loop. Product = " << product << endl;
+  cout << "Before loop. Product = " << product << '\n';
   for (int i = 0; i < multiplier; i++) {
     product += multiplicand;
     // Print out the 5th iteration
     if (i == 4) {
-      cout << "Iteration " << i << ": Product = " << product << endl;
+      cout << "Iteration " << i << ": Product = " << product << '\n';
     } else {
       // Immediatly proceed to next iteration
       continue;
     }
-    cout << "This is printed only on iteration " << i << endl;
+    cout << "This is printed only on iteration " << i << '\n';
   }
-  cout << "Product = " << product << endl;
+  cout << "Product = " << product << '\n';
 
   return 0;
 }

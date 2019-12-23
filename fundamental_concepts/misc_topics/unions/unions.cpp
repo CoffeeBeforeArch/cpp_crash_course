@@ -35,27 +35,27 @@ int main() {
   v_data.d = 2001.1002;
 
   // Print out the size of a struct
-  cout << "sizeof struct: " << sizeof(various_data) << endl;
+  cout << "sizeof struct: " << sizeof(various_data) << '\n';
 
   // Create a union, and assign a field
   union_test ut_1;
   ut_1.union_struct = v_data;
 
   // Print out the size of the union
-  cout << "sizeof union: " << sizeof(ut_1) << endl;
+  cout << "sizeof union: " << sizeof(ut_1) << '\n';
 
   // Print out the address of the union, and of the field
   cout << "Union pointer: " << &ut_1
-       << ", Field pointer: " << &(ut_1.union_struct) << endl;
+       << ", Field pointer: " << &(ut_1.union_struct) << '\n';
 
   // Re-assign the union to contain an integer now
   int b = 5;
   ut_1.union_int = b;
 
   // Print size of the union and pointers again
-  cout << "sizeof union: " << sizeof(ut_1) << endl;
+  cout << "sizeof union: " << sizeof(ut_1) << '\n';
   cout << "Union pointer: " << &ut_1 << ", Field pointer: " << &(ut_1.union_int)
-       << endl;
+       << '\n';
 
   return 0;
 }

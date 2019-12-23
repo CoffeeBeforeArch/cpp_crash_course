@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cout;
 
 // Overloading for "sum" works, but seems excessive if we have many
 // types of a singled function. Do we really need to re-write sum
@@ -33,20 +33,20 @@ int main() {
   double b_d = 6.678;
 
   // Print out sums using overloaded functions
-  cout << "Overload int sum: " << sum_overload(a_i, b_i) << endl;
-  cout << "Overload double sum: " << sum_overload(a_d, b_d) << endl;
+  cout << "Overload int sum: " << sum_overload(a_i, b_i) << '\n';
+  cout << "Overload double sum: " << sum_overload(a_d, b_d) << '\n';
 
   // Print out sums using a templated functions with explicit type
-  cout << "Templated int sum: " << sum<int>(a_i, b_i) << endl;
-  cout << "Templated double sum: " << sum<double>(a_d, b_d) << endl;
+  cout << "Templated int sum: " << sum<int>(a_i, b_i) << '\n';
+  cout << "Templated double sum: " << sum<double>(a_d, b_d) << '\n';
 
   // Print out sums using a templated functions with implicit type
-  cout << "Templated int sum: " << sum(a_i, b_i) << endl;
-  cout << "Templated double sum: " << sum(a_d, b_d) << endl;
+  cout << "Templated int sum: " << sum(a_i, b_i) << '\n';
+  cout << "Templated double sum: " << sum(a_d, b_d) << '\n';
 
   // Print out sums using a templated functions with multiple types
-  cout << "Templated int/double sum: " << sum(a_i, b_d) << endl;
-  cout << "Templated double/int sum: " << sum(a_d, b_i) << endl;
+  cout << "Templated int/double sum: " << sum(a_i, b_d) << '\n';
+  cout << "Templated double/int sum: " << sum(a_d, b_i) << '\n';
 
   return 0;
 }

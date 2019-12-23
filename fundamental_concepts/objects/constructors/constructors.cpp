@@ -4,7 +4,6 @@
 #include <iostream>
 
 using std::cout;
-using std::endl;
 
 // Our class from last example
 class Wallet {
@@ -37,7 +36,7 @@ Wallet::Wallet(int d, int c){
 }
 
 void Wallet::print() {
-  cout << "Value of wallet = $" << dollars << "." << cents << endl;
+  cout << "Value of wallet = $" << dollars << "." << cents << '\n';
 }
 
 int main() {
