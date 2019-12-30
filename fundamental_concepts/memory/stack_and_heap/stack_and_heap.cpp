@@ -1,21 +1,21 @@
-// This program covers the fundamentals of scoping and memory in C++
+// This program covers the basics of the stack and heap in C++
 // By: Nick from CoffeeBeforeArch
 
 #include <iostream>
 
 using std::cout;
 
-// This is illegal, because 'a' is on the stack, and goes out of scope
-// when the function returns
+// A simple function that returns a pointer to a stack variable
 int *bad_return() {
+  // Lifetime of this variable memory only until the end of the function!
   int a = 5;
   cout << "Address of a: " << &a << '\n';
   return &a;
 }
 
-// This is fine, because we are allocating space on the heap
-// Heap memory is valid until we free it!
+// A simple function a pointer to a variable on the heap
 int *good_return() {
+  // The lifetime of the memory is until we deallocate it!
   int *a = new int;
   cout << "Address of a: " << a << '\n';
   *a = 5;
@@ -23,33 +23,16 @@ int *good_return() {
 }
 
 int main() {
-  // When we talk about scope, we talk about where it is valid to access
-  // something
-  // For example, if we define a variable inside of an if statement, it is only
-  // valid inside the if statement!
-  if (true) {
-    int x = 5;
-    cout << "The value of x is: " << x << '\n';
-  }
-
-  // This is illegal!
-  // cout << "The value of x is: " << x << '\n';
-
-  // Here we fetch two pointers from two functions
-  // When we call a function we create a new stack frame.
-  // These are where our where local variables are allocated
-  // The stack frame is popped off the stack when a function returns
-  // That's why it's UB to access the bad pointer!
+  // Let's get a pointer from two different functions
   int *bad = bad_return();
   int *good = good_return();
 
-  // Derefernce our pointers
-  // Reminder, dereferencing the bad pointer will likely cause a segfault
-  //cout << "Address of bad: " << bad << " Value: " << *bad << '\n';
+  // When we derefernce one of these, our program (usually) crashes
+  // That is because we're accessing memory that has gone out of scope!
+  // cout << "Address of bad: " << bad << " Value: " << *bad << '\n';
   cout << "Address of good: " << good << " Value: " << *good << '\n';
 
-  // One thing we have to make sure of is freeing our heap allocated memory
-  // As we just showed, it doesn't get freed automatically!
+  // We can use delete to free out dynamically allocated memory
   delete good;
 
   return 0;
