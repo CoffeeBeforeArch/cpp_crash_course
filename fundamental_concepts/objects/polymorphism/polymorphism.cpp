@@ -1,35 +1,34 @@
-// This program showcases polymorphism in C++
+// This program shows off the basics of polymorphism in C++
 // By: Nick from CoffeeBeforeArch
 
-#include "interface.h"
+#include <iostream>
+#include <vector>
 
-using std::cout;
+// A simple class without inheritence
+class NoInheritence {};
+
+// Our base class with a virtual function
+class Mammal {
+ public:
+  virtual void speak() { std::cout << "I am a mammal!\n"; }
+};
+
+// Our first inherited class
+class Dog : Mammal {
+ public:
+  void speak() { std::cout << "I am a mammal, but also a dog!\n"; }
+};
+
+// Our second inherited class
+class Cat : Mammal {
+ public:
+  void speak() { std::cout << "I am a mammal, but also a cat!\n"; }
+};
 
 int main() {
-  // Create three objects. One car, and one truck, and one generic
-  // vehicle
-  Car car1("ABC-123", 2003, "Four-Door");
-  Truck truck1("456-DEF", 2014, 7);
-
-  // Only valid if Vehicle is not an abstract class
-  Vehicle v1("VANITY", 1975);
-
-  // This calls the appropriate version of getDescription()
-  // Similar to function overloading
-  cout << car1.getDescription() << '\n';
-  cout << truck1.getDescription() << '\n';
-
-  // Only valid if Vehicle is not an abstract class
-  cout << v1.getDescription() << '\n';
-
-  // Both of these objects are derived from vehicles, so we can
-  // represent them as their parent class.
-  Vehicle *v2 = &car1;
-  Vehicle *v3 = &truck1;
-
-  // This will still call the child class method of getDescription()
-  cout << v2->getDescription() << '\n';
-  cout << v3->getDescription() << '\n';
+  // Print the size of classes w/ and w/o polymorphism
+  std::cout << "sizeof(NoInheritence) = " << sizeof(NoInheritence) << '\n';
+  std::cout << "sizeof(Mammal) = " << sizeof(Mammal) << '\n';
 
   return 0;
 }
