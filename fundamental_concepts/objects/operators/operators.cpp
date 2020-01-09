@@ -19,7 +19,7 @@ class Wallet {
 
   // We can define what the operators do for our class
   // Here, we define a way to add the contents of 2 wallets
-  //Wallet operator+(const Wallet w1);
+  Wallet operator+(const Wallet w1);
 
   void print();
   void set_dollars(int d) { dollars = d; }
@@ -40,7 +40,7 @@ Wallet::Wallet(const Wallet &w) {
   dollars = w.get_dollars();
   cents = w.get_cents();
 }
-/*
+
 // Our custom addition operator
 Wallet Wallet::operator+(const Wallet w1) {
   // Calculate the total number of cents in the wallet
@@ -50,7 +50,7 @@ Wallet Wallet::operator+(const Wallet w1) {
   // Covert total cents into dollars and cents
   return Wallet(c / 100, c % 100);
 }
-*/
+
 // Our method for printing the contents of a wallet
 void Wallet::print() {
   cout << "Value of wallet = $" << dollars << "." << cents << '\n';
