@@ -16,7 +16,6 @@ class IntArray {
   // Our constructor, default constructor, and and copy constructor
   IntArray(int N);
   IntArray() = delete;
-  IntArray(const IntArray &a);
 
   // Our destructor!
   // Specifies what happens when we destroy an object
@@ -30,7 +29,19 @@ class IntArray {
 
   // Overloaded operator to index our data
   int &operator[](unsigned id) { return data[id]; }
+
+  // A print method for dumping our IntArray contents
+  void print();
 };
+
+// Our print method
+void IntArray::print() {
+  cout << "Printing contents starting at " << data << '\n';
+  for (int i = 0; i < size; i++) {
+    cout << data[i] << ' ';
+  }
+  cout << '\n';
+}
 
 // Our constructor where we allocate memory
 IntArray::IntArray(int N) {
@@ -38,22 +49,6 @@ IntArray::IntArray(int N) {
   cout << "Allocating memory in constructor!\n";
   data = new int[N]();
   size = N;
-}
-
-// Our copy constructor that performs a deep copy!
-IntArray::IntArray(const IntArray &a) {
-  // Check if we need to re-allocate
-  int copy_n = a.get_size();
-  int *copy_ptr = a.get_data();
-  if (size != copy_n && data != nullptr) {
-    delete[] data;
-  }
-
-  // Copy the data
-  data = new int[copy_n];
-  for (int i = 0; i < copy_n; i++) {
-    data[i] = copy_ptr[i];
-  }
 }
 
 // Destructors have the name as the class they belong to, but use a tilde (~)
@@ -68,16 +63,11 @@ int main() {
   // Create an array with 10 elements
   IntArray a1(10);
   for (int i = 0; i < a1.get_size(); i++) {
-    a1[i] = i;
+    a1[i] = i * i;
   }
 
-  // Use the copy constructor
-  IntArray a2 = a1;
-
-  // With our custom constructor, we can stop our pointers from aliasing each
-  // other!
-  cout << "a1's pointer: " << a1.get_data()
-       << " a2's pointer: " << a2.get_data() << '\n';
+  // Dump the values
+  a1.print();
 
   return 0;
 }
