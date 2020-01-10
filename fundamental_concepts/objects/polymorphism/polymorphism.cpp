@@ -4,9 +4,6 @@
 #include <iostream>
 #include <vector>
 
-// A simple class without inheritence
-class NoInheritence {};
-
 // Our base class with a virtual function
 class Mammal {
  public:
@@ -30,15 +27,9 @@ class Cat : public Mammal {
 };
 
 // We can treat objects of different types in a uniform way!
-void callFunc(Mammal &m) {
-  m.speak();
-}
+void callFunc(Mammal &m) { m.speak(); }
 
 int main() {
-  // Print the size of classes w/ and w/o polymorphism
-  std::cout << "sizeof(NoInheritence) = " << sizeof(NoInheritence) << '\n';
-  std::cout << "sizeof(Mammal) = " << sizeof(Mammal) << '\n';
-
   // Let's create three objects
   Mammal m;
   Dog d;
