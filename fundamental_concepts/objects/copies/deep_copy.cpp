@@ -15,6 +15,7 @@ class IntArray {
   // Out constructor, copy constructor, and destructor
   IntArray(int N);
   IntArray() = delete;
+  // Now we will define a copy constructor to do a deep copy
   IntArray(const IntArray &a);
   ~IntArray();
 
@@ -26,6 +27,9 @@ class IntArray {
 
   // Overloaded operator to index our data
   int &operator[](unsigned id) { return data[id]; }
+
+  // Overloaded operator for our deep copy
+  IntArray &operator=(const IntArray &rhs);
 
   // A print method for dumping our IntArray contents
   void print();
@@ -55,22 +59,37 @@ IntArray::~IntArray() {
 }
 
 // Our copy constructor
-IntArray::IntArray(const IntArray &a) {
-  // Copying the pointer is no good!
-  // That could lead to multiple objects all calling delete on the same address!
-  // Instead we need to do a new allocation, and copy the data
-  int copy_size = a.get_size();
-  if (size != copy_size) {
-    size = copy_size;
+// For when we are creating a new object based on another
+IntArray::IntArray(const IntArray &rhs) {
+  // Copy the size
+  size = rhs.get_size();
+
+  // Allocate memory
+  data = new int[size];
+
+  // Copy the data
+  for (int i = 0; i < size; i++) {
+    data[i] = rhs.get_data()[i];
+  }
+}
+
+// Our overloaded = operator
+// For when we are copying to an existing object
+IntArray &IntArray::operator=(const IntArray &rhs) {
+  // Small optimization to only allocate when we need to
+  if (size != rhs.get_size()) {
     delete[] data;
+    size = rhs.get_size();
     data = new int[size];
   }
 
   // Copy all the data elements
-  int *copy_data = a.get_data();
   for (int i = 0; i < size; i++) {
-    data[i] = copy_data[i];
+    data[i] = rhs.get_data()[i];
   }
+
+  // Return the current object
+  return *this;
 }
 
 int main() {
@@ -83,9 +102,14 @@ int main() {
   // Copy the elements with a deep copy
   IntArray a2 = a1;
 
+  // Use our operator deep copy operator=
+  IntArray a3(5);
+  a3 = a2;
+
   // Dump the values
   a1.print();
   a2.print();
+  a3.print();
 
   return 0;
 }

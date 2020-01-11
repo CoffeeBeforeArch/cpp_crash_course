@@ -15,6 +15,8 @@ class IntArray {
   // Out constructor, copy constructor, and destructor
   IntArray(int N);
   IntArray() = delete;
+  // Our default copy-constructor does a member-wise copy
+  // In this case, that results in a "shallow copy"
   IntArray(const IntArray &a) = default;
   ~IntArray();
 
@@ -61,12 +63,17 @@ int main() {
     a1[i] = i * i;
   }
 
-  // Copy the elements with a deep copy
+  // Copy the elements with a shallow copy
   IntArray a2 = a1;
+
+  // Use our default operator =
+  IntArray a3(5);
+  a3 = a2;
 
   // Dump the values
   a1.print();
   a2.print();
+  a3.print();
 
   return 0;
 }
