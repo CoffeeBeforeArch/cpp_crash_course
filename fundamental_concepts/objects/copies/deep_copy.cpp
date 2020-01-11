@@ -47,14 +47,12 @@ void IntArray::print() {
 // Our constructor where we allocate memory
 IntArray::IntArray(int N) {
   // Memory is also value initialized
-  cout << "Allocating memory in constructor!\n";
   data = new int[N]();
   size = N;
 }
 
 // Out destructor that frees memory
 IntArray::~IntArray() {
-  cout << "Freeing our allocated memory in destructor!\n";
   delete[] data;
 }
 
