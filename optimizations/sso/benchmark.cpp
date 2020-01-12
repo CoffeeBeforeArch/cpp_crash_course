@@ -17,8 +17,7 @@ static void stringBench(benchmark::State &s) {
   while (s.KeepRunning()) {
     for (int i = 0; i < 10000; i++) {
       // Create the string of a specified size
-      std::string str(string_len, 'a');
-      v.push_back(str);
+      v.emplace_back(std::string(string_len, 'X'));
     }
   }
 }
