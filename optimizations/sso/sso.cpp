@@ -20,7 +20,7 @@ int main() {
   cout << "Size of string = " << string_size << endl;
 
   // Gradually increase the size of the string in the loop
-  for (size_t i = 0; i < string_size; i++) {
+  for (size_t i = 0; i < 32; i++) {
     string s(i, 'X');
     std::cout << i << ": " << s << std::endl;
   }
