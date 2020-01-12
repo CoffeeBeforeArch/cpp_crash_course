@@ -20,7 +20,8 @@ int main() {
   // Gradually increase the size of the string in the loop
   for (size_t i = 0; i < 32; i++) {
     std::string s(i, 'X');
-    std::cout << i << ": " << s << '\n';
+    std::cout << "Characters: " << i
+              << " Address: " << static_cast<const void*>(s.data()) << '\n';
   }
 
   return 0;

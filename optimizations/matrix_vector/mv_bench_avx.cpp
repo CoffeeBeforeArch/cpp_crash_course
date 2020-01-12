@@ -5,19 +5,21 @@
 #include <benchmark/benchmark.h>
 #include <immintrin.h>
 #include <cstdlib>
+#include <cstring>
 
 using namespace std;
 
 // Inlined function that uses intrinsic
 inline float prod_8(float *m_v, float *v) {
   // Type punning with a union
-  union {
-    float r[8];
-    __m256 rv;
-  };
+  float r[8];
+  __m256 rv;
 
   // Dot product intrinsic
   rv = _mm256_dp_ps(_mm256_load_ps(m_v), _mm256_load_ps(v), 0xf1);
+
+  // Safe way to avoid type punning!
+  std::memcpy(r, &rv, sizeof(float) * 8);
 
   // Now add the two partial sums together
   return r[0] + r[4];
