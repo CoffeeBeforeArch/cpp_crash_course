@@ -50,6 +50,42 @@ static void baseMod(benchmark::State &s) {
 // Register the benchmark
 BENCHMARK(baseMod)->Apply(custom_args);
 
+// An unrolled version of our baseline
+static void unrollMod(benchmark::State &s) {
+  // Number of elements
+  int N = s.range(0);
+
+  // Max for mod operator
+  int ceil = s.range(1);
+
+  // Vector for input and output of modulo
+  vector<int> input;
+  vector<int> output;
+  input.resize(N);
+  output.resize(N);
+
+  // Generate random inputs
+  mt19937 rng;
+  rng.seed(random_device()());
+  uniform_int_distribution<int> dist(0, 255);
+  for (int &i : input) {
+    i = dist(rng);
+  }
+
+  while (s.KeepRunning()) {
+    // Compute the modulo for each element
+    for (int i = 0; i < N; i+=4) {
+      output[i] = input[i] % ceil;
+      output[i + 1] = input[i + 1] % ceil;
+      output[i + 2] = input[i + 2] % ceil;
+      output[i + 3] = input[i + 3] % ceil;
+    }
+  }
+}
+// Register the benchmark
+BENCHMARK(unrollMod)->Apply(custom_args);
+
+
 // Baseline for intuitive modulo operation
 static void fastMod(benchmark::State &s) {
   // Number of elements
