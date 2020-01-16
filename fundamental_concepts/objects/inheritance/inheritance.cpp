@@ -9,16 +9,17 @@
 // can implement those a single time as a parent class, and inherit from that
 // class!
 
-// Here, we create a simple classs with a single std::string
+// Here, we create a simple struct with a single std::string
 struct Parent {
   // Out constructor that takes a string
-  Parent(std::string n) { name = n; }
-  std::string name;
+  Parent() = default;
+  Parent(std::string n) : name(n) {}
+  const std::string name;
   void print_name() { std::cout << "My name is " << name << '\n'; }
 };
 
-// Our Child class inherits from the Parent class
-// We can expand on the parent class, and implement things specific to the child
+// Our Child struct inherits from the Parent struct
+// We can expand on the parent struct, and implement things specific to the child
 // class
 struct Child : Parent {
   // We can use an initialization list to call our parents constructor
@@ -39,7 +40,7 @@ int main() {
   std::cout << "sizeof(Parent) = " << sizeof(Parent) << '\n';
   std::cout << "sizeof(Child) = " << sizeof(Child) << '\n';
 
-  // Let's create an instance of our classes
+  // Let's create an instance of our structs
   Parent p("Yale Patt");
   Child c("Doug Burger", "FPGA");
 
