@@ -19,12 +19,14 @@ C++ Compiler: g++ (9.1)
 # Basics
 | Video | Concepts | Files |
 | ----- | -------- | ----- |
+|[Text Editors and Compilation](https://youtu.be/fBK19n2x-Bg) | | |
+|[Visual Studio Code](https://youtu.be/T55-wbdSJQQ) | | |
 
 # Functions
 | Video | Concepts | Files |
 | ----- | -------- | ----- |
 
-# Containers
+# Memory
 | Video | Concepts | Files |
 | ----- | -------- | ----- |
 
