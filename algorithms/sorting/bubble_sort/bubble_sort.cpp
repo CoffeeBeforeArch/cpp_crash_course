@@ -6,7 +6,15 @@
 #include <random>
 #include <vector>
 
+// A simple implementation of bubble sort
 void bubble_sort(std::vector<int> &v) {
+  // For N-1 elements...
+  for(auto i = 0u; i < v.size() - 1; i++) {
+    // Bubble up the largest element to the correct position
+    for(auto j = 0u; j < v.size() - i - 1u; j++) {
+      if(v[j] > v[j + 1]) std::swap(v[j], v[j + 1]);
+    }
+  }
 }
 
 int main() {
