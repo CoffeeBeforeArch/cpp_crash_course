@@ -10,14 +10,14 @@
 void merge(std::vector<int> &v, unsigned left, unsigned right) {
   // Copy the sorted sub-vectors into their own vectors
   // Not necessary, but it simplifies the remaining code
-  std::vector<int> l(begin(v) + left, begin(v) + ((left + right) / 2));
-  std::vector<int> r(begin(v) + ((left + right) / 2) + 1, begin(v) + right);
-
+  std::vector<int> l(begin(v) + left, begin(v) + ((left + right) / 2) + 1);
+  std::vector<int> r(begin(v) + ((left + right) / 2) + 1, begin(v) + right + 1);
+  
   // Dump elements into the original vector one at a time
   auto l_index = 0u;
   auto r_index = 0u;
   int v_index = left;
-  while(l_index != l.size() && r_index != r.size()) {
+  while(l_index < l.size() && r_index < r.size()) {
     // Take from either the left or right vector
     if(l[l_index] <= r[r_index]) {
       v[v_index] = l[l_index++];
@@ -48,7 +48,7 @@ void merge_sort(std::vector<int> &v, unsigned left, unsigned right) {
 
 int main() {
   // Number of elements to sort
-  const unsigned N = 4;
+  const unsigned N = 20;
 
   // Our vector to sort
   std::vector<int> v(N);
