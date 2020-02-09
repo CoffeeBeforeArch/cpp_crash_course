@@ -8,17 +8,27 @@
 
 // Combine two sorted subvectors
 void merge(std::vector<int> &v, unsigned left, unsigned right) {
-  // Copy the sorted sub-vectors into their own vectors
-  // Not necessary, but it simplifies the remaining code
-  std::vector<int> l(begin(v) + left, begin(v) + ((left + right) / 2) + 1);
-  std::vector<int> r(begin(v) + ((left + right) / 2) + 1, begin(v) + right + 1);
+  // Start of the left sub-vector
+  auto l_begin = begin(v) + left;
+  // End of the left sub-vector
+  auto l_end = begin(v) + (left + right) / 2 + 1;
+  // Start of the right sub_vector
+  auto r_begin = l_end;
+  // End of the right sub_vector
+  auto r_end = begin(v) + right + 1;
   
-  // Dump elements into the original vector one at a time
+  // Copy the two sub_vectors to simplify the remainder of the code
+  std::vector<int> l(l_begin, l_end);
+  std::vector<int> r(r_begin, r_end);
+  
+  // Simplifying temporary variables
   auto l_index = 0u;
   auto r_index = 0u;
   int v_index = left;
+  
+  // Dump elements into the original vector one at a time
   while(l_index < l.size() && r_index < r.size()) {
-    // Take from either the left or right vector
+    // Take from either the left or right vector and increment the index
     if(l[l_index] <= r[r_index]) {
       v[v_index] = l[l_index++];
     }else {
