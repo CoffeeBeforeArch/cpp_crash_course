@@ -29,7 +29,7 @@ int main() {
   std::cout << '\n';
 
   // Sort the vector
-  std::sort(begin(v), end(v));
+  std::ranges::sort(v);
 
   // Dump the sorted contents
   std::cout << "After: ";
