@@ -13,7 +13,7 @@ Text Editor: VIM
 
 IDE: VS Code
 
-C++ Compiler: g++ (9.1)
+C++ Compiler: g++ (10.1 experimental)
 
 # Concepts covered in C++ Crash Course
 ## Environment Setup
