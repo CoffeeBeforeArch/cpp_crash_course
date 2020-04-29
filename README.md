@@ -30,8 +30,8 @@ C++ Compiler: g++ (10.1 experimental)
 |[Variables](https://youtu.be/ZRdtYCdlfhg) | Variables, Data Types | [variables.cpp](https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/getting_started/variables/variables.cpp) |
 |[Control Flow](https://youtu.be/r7wDJHzIHP4) | If-Else Statements | [conditionals.cpp](https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/conditionals/conditionals.cpp) |
 |[Arrays](https://youtu.be/bpt2BsN-Qts) | Standard Library Containers, Arrays | [arrays.cpp](https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/containers/arrays/arrays.cpp) |
-|[For Loops](https://youtu.be/t-fEzti4wbQ) | For Loops | |
-|[Vectors](https://youtu.be/AFA7XmR9L-I) | Standard Library Containers, Vectors | [for_loops.cpp](https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/for_loops/for_loops.cpp) |
+|[For Loops](https://youtu.be/t-fEzti4wbQ) | For Loops | [for_loops.cpp](https://github.com/CoffeeBeforeArch/cpp_crash_course/blob/master/fundamental_concepts/control_flow/for_loops/for_loops.cpp) |
+|[Vectors](https://youtu.be/AFA7XmR9L-I) | Standard Library Containers, Vectors | |
 
 
 ## Functions
