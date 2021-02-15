@@ -11,8 +11,8 @@ int main() {
   float sum;
 
   // Initialize variables
-  a = 5.823;
-  b = 10.123;
+  a = 5.823f;
+  b = 10.123f;
 
   // Declare and initialize in the same line
   // i will be deduced as type int
