@@ -3,14 +3,9 @@
 
 #include <iostream>
 
-using std::cout;
-
 // Calculates the factorial of a given integer
 // e.g. 5! = 5 * 4 * 3 * 2 * 1 = 120
 int factorial(int N) {
-  // Nice way to print the function signature and value
-  cout << __PRETTY_FUNCTION__ << ", " << N << '\n';
-
   // Base case (stop recursion)
   if (N <= 1) {
     return 1;
@@ -24,9 +19,6 @@ int factorial(int N) {
 // Print the nth digit the fibonacci sequence (assume positive number)
 // e.g. for n = 5, fibonacci(5) = (n-1 + n-2) = 3 + 2 = 5
 int fibonacci(int N) {
-  // Nice way to print the function signature and value
-  cout << __PRETTY_FUNCTION__ << ", " << N << '\n';
-
   // Base case
   if (N <= 1) {
     return N;
@@ -44,8 +36,8 @@ int main() {
   const int r_fib = fibonacci(N);
 
   // Print results
-  cout << N << "! = " << r_fac << '\n';
-  cout << "The " << N << "th fibonacci number is " << r_fib << '\n';
+  std::cout << N << "! = " << r_fac << '\n';
+  std::cout << "The " << N << "th fibonacci number is " << r_fib << '\n';
 
   return 0;
 }

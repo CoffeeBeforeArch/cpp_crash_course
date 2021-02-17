@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-using std::cout;
-
 // Our class from last example
 class Wallet {
  private:
@@ -30,13 +28,13 @@ class Wallet {
 };
 
 // Constructors have the same name as the class they belong to
-Wallet::Wallet(int d, int c){
+Wallet::Wallet(int d, int c) {
   dollars = d;
   cents = c;
 }
 
 void Wallet::print() {
-  cout << "Value of wallet = $" << dollars << "." << cents << '\n';
+  std::cout << "Value of wallet = $" << dollars << "." << cents << '\n';
 }
 
 int main() {
@@ -50,10 +48,10 @@ int main() {
   Wallet w2;
   // Likely does not print what we are expecting (garbage values)
   w2.print();
-  
+
   // Creating here we are zero-initialing a class, and assigning it to w3
   Wallet w3 = Wallet();
-  //Wallet w3 = {};
+  // Wallet w3 = {};
   w3.print();
 
   return 0;

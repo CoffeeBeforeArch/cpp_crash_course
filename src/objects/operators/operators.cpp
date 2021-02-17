@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-using std::cout;
-
 // Our class from last example
 class Wallet {
  private:
@@ -36,7 +34,7 @@ Wallet::Wallet(int d, int c) {
 
 // Our copy constructor with a print
 Wallet::Wallet(const Wallet &w) {
-  cout << "Calling the copy constructor!\n";
+  std::cout << "Calling the copy constructor!\n";
   dollars = w.get_dollars();
   cents = w.get_cents();
 }
@@ -53,7 +51,7 @@ Wallet Wallet::operator+(const Wallet w1) {
 
 // Our method for printing the contents of a wallet
 void Wallet::print() {
-  cout << "Value of wallet = $" << dollars << "." << cents << '\n';
+  std::cout << "Value of wallet = $" << dollars << "." << cents << '\n';
 }
 
 int main() {

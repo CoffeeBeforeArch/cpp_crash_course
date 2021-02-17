@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-using std::cout;
-
 // A simple templated class that holds a dynamically allocated array
 template <class T>
 class Data {
@@ -33,7 +31,7 @@ Data<T>::Data(int N) {
 // Our templated destructor
 template <class T>
 Data<T>::~Data() {
-  cout << "Printing from the basic destructor!\n";
+  std::cout << "Printing from the basic destructor!\n";
   delete[] d;
 }
 
@@ -47,7 +45,7 @@ T &Data<T>::operator[](const unsigned i) {
 // Allows us to treat some types differently than the general case
 template <>
 Data<float>::~Data() {
-  cout << "Printing from the float destructor!\n";
+  std::cout << "Printing from the float destructor!\n";
   delete[] d;
 }
 

@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-using std::cout;
-
 // Our class from last example
 class IntArray {
  private:
@@ -35,11 +33,11 @@ class IntArray {
 
 // Our print method
 void IntArray::print() {
-  cout << "Printing contents starting at " << data << '\n';
+  std::cout << "Printing contents starting at " << data << '\n';
   for (int i = 0; i < size; i++) {
-    cout << data[i] << ' ';
+    std::cout << data[i] << ' ';
   }
-  cout << '\n';
+  std::cout << '\n';
 }
 
 // Our constructor where we allocate memory
@@ -50,9 +48,7 @@ IntArray::IntArray(int N) {
 }
 
 // Out destructor that frees memory
-IntArray::~IntArray() {
-  delete[] data;
-}
+IntArray::~IntArray() { delete[] data; }
 
 int main() {
   // Create an array with 10 elements

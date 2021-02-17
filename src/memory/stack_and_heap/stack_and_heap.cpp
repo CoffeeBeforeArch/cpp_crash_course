@@ -3,13 +3,11 @@
 
 #include <iostream>
 
-using std::cout;
-
 // A simple function that returns a pointer to a stack variable
 int *bad_return() {
   // Lifetime of this variable memory only until the end of the function!
   int a = 5;
-  cout << "Address of a: " << &a << '\n';
+  std::cout << "Address of a: " << &a << '\n';
   return &a;
 }
 
@@ -17,7 +15,7 @@ int *bad_return() {
 int *good_return() {
   // The lifetime of the memory is until we deallocate it!
   int *a = new int;
-  cout << "Address of a: " << a << '\n';
+  std::cout << "Address of a: " << a << '\n';
   *a = 5;
   return a;
 }
@@ -30,7 +28,7 @@ int main() {
   // When we derefernce one of these, our program (usually) crashes
   // That is because we're accessing memory that has gone out of scope!
   // cout << "Address of bad: " << bad << " Value: " << *bad << '\n';
-  cout << "Address of good: " << good << " Value: " << *good << '\n';
+  std::cout << "Address of good: " << good << " Value: " << *good << '\n';
 
   // We can use delete to free out dynamically allocated memory
   delete good;

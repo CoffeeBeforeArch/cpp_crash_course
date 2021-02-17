@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-using std::cout;
-
 int main() {
   // When we declare a variable, we're asking for some memory
   int a = 5;
@@ -16,16 +14,16 @@ int main() {
 
   // We can show they both refer to the same piece of memory by printing their
   // addresses
-  cout << "a: value: " << a << ", address " << &a << '\n';
-  cout << "b: value: " << b << ", address " << &b << '\n';
+  std::cout << "a: value: " << a << ", address " << &a << '\n';
+  std::cout << "b: value: " << b << ", address " << &b << '\n';
 
   // Updating either of these variables will change what is stored at their
   // common address
   a = 10;
 
   // Print values and addresses
-  cout << "a: value: " << a << ", address " << &a << '\n';
-  cout << "b: value: " << b << ", address " << &b << '\n';
+  std::cout << "a: value: " << a << ", address " << &a << '\n';
+  std::cout << "b: value: " << b << ", address " << &b << '\n';
 
   // Pointers are varaibles that hold an address
   // In most cases, we prefer references to pointers
@@ -34,10 +32,10 @@ int main() {
 
   // Print the value and address
   // Notice the value is the address of 'a', and the address is someplace new
-  cout << "c: value: " << c << ", address " << &c << '\n';
+  std::cout << "c: value: " << c << ", address " << &c << '\n';
 
   // To access the data, we dereference the pointer
-  cout << "Data at address " << c << " = " << *c << '\n';
+  std::cout << "Data at address " << c << " = " << *c << '\n';
 
   return 0;
 }

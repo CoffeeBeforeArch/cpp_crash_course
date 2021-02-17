@@ -4,8 +4,6 @@
 #include <cassert>
 #include <iostream>
 
-using std::cout;
-
 // Our class from last example
 class IntArray {
  private:
@@ -36,17 +34,17 @@ class IntArray {
 
 // Our print method
 void IntArray::print() {
-  cout << "Printing contents starting at " << data << '\n';
+  std::cout << "Printing contents starting at " << data << '\n';
   for (int i = 0; i < size; i++) {
-    cout << data[i] << ' ';
+    std::cout << data[i] << ' ';
   }
-  cout << '\n';
+  std::cout << '\n';
 }
 
 // Our constructor where we allocate memory
 IntArray::IntArray(int N) {
   // Memory is also value initialized
-  cout << "Allocating memory in constructor!\n";
+  std::cout << "Allocating memory in constructor!\n";
   data = new int[N]();
   size = N;
 }
@@ -55,7 +53,7 @@ IntArray::IntArray(int N) {
 // They get called when an object goes out of scope, or when they are manually
 // deleted
 IntArray::~IntArray() {
-  cout << "Freeing our allocated memory in destructor!\n";
+  std::cout << "Freeing our allocated memory in destructor!\n";
   delete[] data;
 }
 

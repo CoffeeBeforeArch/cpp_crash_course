@@ -3,23 +3,21 @@
 
 #include <iostream>
 
-using std::cout;
-
 // Prints the value of an integer and it's size, and increments the value
 int print_and_inc(int i) {
-  cout << "Value: " << i << ", S: " << sizeof(i) << '\n';
+  std::cout << "Value: " << i << ", S: " << sizeof(i) << '\n';
   return i + 1;
 }
 
 // Prints the value of a float and it's size, and increments the value
 float print_and_inc(float sp) {
-  cout << "Value: " << sp << ", S: " << sizeof(sp) << '\n';
+  std::cout << "Value: " << sp << ", S: " << sizeof(sp) << '\n';
   return sp + 1;
 }
 
 // Prints the value of a double and it's size, and increments the value
 double print_and_inc(double dp) {
-  cout << "Value: " << dp << ", S: " << sizeof(dp) << '\n';
+  std::cout << "Value: " << dp << ", S: " << sizeof(dp) << '\n';
   return dp + 1;
 }
 
@@ -37,9 +35,9 @@ int main() {
   dp = print_and_inc(dp);
 
   // Print out the returned values
-  cout << "New int value " << i << '\n';
-  cout << "New float value " << sp << '\n';
-  cout << "New double value " << dp << '\n';
+  std::cout << "New int value " << i << '\n';
+  std::cout << "New float value " << sp << '\n';
+  std::cout << "New double value " << dp << '\n';
 
   return 0;
 }

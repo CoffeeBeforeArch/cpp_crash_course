@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-using std::cout;
-
 // Our class from last example
 class Wallet {
  private:
@@ -34,14 +32,14 @@ Wallet::Wallet(int d, int c) {
 
 // Copy constructs also have the name as the class they belong to, but they take
 // a another instance of the class as a parameter.
-Wallet::Wallet(const Wallet &w){
-  cout << "Calling the copy constructor!\n";
+Wallet::Wallet(const Wallet &w) {
+  std::cout << "Calling the copy constructor!\n";
   dollars = w.get_dollars();
   cents = w.get_cents();
 }
 
 void Wallet::print() {
-  cout << "Value of wallet = $" << dollars << "." << cents << '\n';
+  std::cout << "Value of wallet = $" << dollars << "." << cents << '\n';
 }
 
 int main() {
