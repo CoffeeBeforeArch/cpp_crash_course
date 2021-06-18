@@ -9,7 +9,10 @@ int main() {
   int b = 10;
 
   // Use the ternery operator to initialize C
-  int c = a > b ? 1 : 0;
+  // First evaluates "a > b"
+  //  if True, initializes c to a
+  //  if False, initializes c to b
+  int c = a > b ? a : b;
 
   // Print out the result
   std::cout << "The value of c is: " << c << '\n';
