@@ -12,9 +12,9 @@ void print(std::vector<int> a) {
 }
 
 int main() {
-  // Create an array
-  std::vector<int> my_vec {10, 2, 4, 15, 6, 5};
-  
+  // Create a vector
+  std::vector<int> my_vec{10, 2, 4, 15, 6, 5};
+
   // Print out "Before" vector
   print(my_vec);
 
@@ -23,5 +23,4 @@ int main() {
   print(my_vec);
 
   return 0;
-
 }
