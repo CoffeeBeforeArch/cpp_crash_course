@@ -1,4 +1,4 @@
-// This program shows off the basics of an unordered set in C++
+// This program shows off the basics of an forward list in C++
 // By: Nick from CoffeeBeforeArch
 
 #include <forward_list>
